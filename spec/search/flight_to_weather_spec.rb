@@ -12,8 +12,10 @@ describe 'As the BE' do
         limit: 20
       }
     end
+    
     it 'I can make call to the weather API for each flight' do
       VCR.use_cassette('flight_data') do
+        
         conn = Faraday.new('http://localhost:9393')
 
         response = conn.get '/flights' do |req|
@@ -26,7 +28,7 @@ describe 'As the BE' do
         end
 
         flights = JSON.parse(response.body, symbolize_names: true)
-
+        
         @trips = []
 
         flights[:data].each do |flight|
@@ -80,6 +82,8 @@ describe 'As the BE' do
                         :price,
                         :departure_datetime,
                         :arrival_datetime,
+                        :r_departure_datetime,
+                        :r_arrival_datetime,
                         :booking_link,
                         :trip_duration,
                         :id,
@@ -105,6 +109,8 @@ describe 'As the BE' do
               @price = flight[:attributes][:price]
               @departure_datetime = flight[:attributes][:departure_datetime]
               @arrival_datetime = flight[:attributes][:arrival_datetime]
+              @r_departure_datetime = flight[:attributes][:r_departure_datetime]
+              @r_arrival_datetime = flight[:attributes][:r_arrival_datetime]
               @booking_link = flight[:attributes][:booking_link]
               @trip_duration = flight[:attributes][:trip_duration]
               @id = flight[:attributes][:id]
@@ -123,7 +129,7 @@ describe 'As the BE' do
           @trips << Trip.new(flight, weather)
         end
         #Sage/George/Jesse, look at @trips variable contents.  This is what needs to
-        #be serialized.  Also note that there is no attribute called 'sky-coverage'
+        #be serialized.  Also note that are no attributes called 'sky-coverage', 'chance_precip', or 'weather_data_available'
         require 'pry'; binding.pry
       end
     end

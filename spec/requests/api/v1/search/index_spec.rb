@@ -10,7 +10,7 @@ RSpec.describe 'Search', :vcr do
             }
     get '/api/v1/search', params: flight_params
     trips = JSON.parse(response.body, symbolize_names: true)
-    # binding.pry
+
     expect(response.body).to be_a String
     expect(response).to be_successful
     expect(trips[:data]).to be_an Array

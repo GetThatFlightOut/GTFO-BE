@@ -121,10 +121,10 @@ describe 'As the BE' do
           end
 
           @trips << Trip.new(flight, weather)
-          #Sage/George/Jesse, look at @trips variable contents.  This is what needs to
-          #be serialized.  Also note that there is no attribute called 'sky-coverage'
-          require 'pry'; binding.pry
         end
+        #Sage/George/Jesse, look at @trips variable contents.  This is what needs to
+        #be serialized.  Also note that there is no attribute called 'sky-coverage'
+        require 'pry'; binding.pry
       end
     end
   end

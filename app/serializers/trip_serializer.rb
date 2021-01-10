@@ -13,15 +13,15 @@ class TripSerializer
              :r_arrival_datetime,
              :booking_link,
              :trip_duration,
-             :flight_id
-             :min_f
-             :max_f
-             :min_c
-             :max_c
-             :day_feels_like_f
-             :day_feels_like_c
-             :description
-             :weather_date
-             :sky_coverage
+             :flight_id,
+             :min_f,
+             :max_f,
+             :min_c,
+             :max_c,
+             :day_feels_like_f,
+             :day_feels_like_c,
+             :description,
+             :weather_date,
+             :sky_coverage,
              :weather
 end

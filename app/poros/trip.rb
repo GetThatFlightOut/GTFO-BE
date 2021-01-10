@@ -22,7 +22,8 @@ class Trip
               :day_feels_like_f,
               :description,
               :weather_date,
-              :weather
+              :weather,
+              :sky_coverage
 
   def initialize(flight, weather, index)
     @id = index

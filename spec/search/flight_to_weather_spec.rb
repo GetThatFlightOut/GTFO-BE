@@ -82,7 +82,16 @@ describe 'As the BE' do
                         :arrival_datetime,
                         :booking_link,
                         :trip_duration,
-                        :id
+                        :id,
+                        :min_f,
+                        :max_f,
+                        :min_c,
+                        :max_c,
+                        :day_feels_like_c,
+                        :day_feels_like_f,
+                        :description,
+                        :date,
+                        :weather
 
 
 
@@ -99,11 +108,21 @@ describe 'As the BE' do
               @booking_link = flight[:attributes][:booking_link]
               @trip_duration = flight[:attributes][:trip_duration]
               @id = flight[:attributes][:id]
+              @min_f = weather[:data][0][:attributes][:min_f]
+              @max_f = weather[:data][0][:attributes][:max_f]
+              @min_c = weather[:data][0][:attributes][:min_c]
+              @max_c = weather[:data][0][:attributes][:max_c]
+              @day_feels_like_c = weather[:data][0][:attributes][:day_feels_like_c]
+              @day_feels_like_f = weather[:data][0][:attributes][:day_feels_like_f]
+              @description = weather[:data][0][:attributes][:description]
+              @date = weather[:data][0][:attributes][:date]
               @weather = WeatherFacade.daily_weather(weather)
             end
           end
 
           @trips << Trip.new(flight, weather)
+          #Sage/George/Jesse, look at @trips variable contents.  This is what needs to
+          #be serialized.  Also note that there is no attribute called 'sky-coverage'
           require 'pry'; binding.pry
         end
       end

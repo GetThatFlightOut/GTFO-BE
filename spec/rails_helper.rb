@@ -73,7 +73,8 @@ RSpec.configure do |config|
   VCR.configure do |config|
     config.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
     config.hook_into :webmock
-    config.filter_sensitive_data('<DONT_USE_MY_API_KEY>') { ENV['WEATHER_API_KEY'] }
+    # config.filter_sensitive_data('<DONT_USE_MY_API_KEY>') { ENV['WEATHER_API_KEY'] }
+    # config.filter_sensitive_data('<DONT_USE_MY_API_KEY>') { ENV['FLIGHT_API_KEY'] }
     config.configure_rspec_metadata! #this allows us to use the :vcr syntax
     config.before_record do |i|
       i.response.body.force_encoding('UTF-8')

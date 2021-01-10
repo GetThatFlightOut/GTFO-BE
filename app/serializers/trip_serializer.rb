@@ -13,7 +13,7 @@ class TripSerializer
              :r_arrival_datetime,
              :booking_link,
              :trip_duration,
-             :id
+             :flight_id
              :min_f
              :max_f
              :min_c
@@ -21,8 +21,7 @@ class TripSerializer
              :day_feels_like_f
              :day_feels_like_c
              :description
-             :date
-             :chance_precip
+             :weather_date
              :sky_coverage
-             :is_available
+             :weather
 end

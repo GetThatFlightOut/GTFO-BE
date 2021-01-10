@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  get '/api/v1/search', to: 'search#index'
+
+  namespace :api do
+    namespace :v1 do
+      resources :search, only: [:index]
+      get '/search/lucky', to: 'search#lucky'
+    end
+  end
 end

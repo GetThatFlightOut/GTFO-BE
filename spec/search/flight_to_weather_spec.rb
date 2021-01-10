@@ -12,10 +12,10 @@ describe 'As the BE' do
         limit: 20
       }
     end
-    
+
     it 'I can make call to the weather API for each flight' do
       VCR.use_cassette('flight_data') do
-        
+
         conn = Faraday.new('http://localhost:9393')
 
         response = conn.get '/flights' do |req|
@@ -28,7 +28,7 @@ describe 'As the BE' do
         end
 
         flights = JSON.parse(response.body, symbolize_names: true)
-        
+
         @trips = []
 
         flights[:data].each do |flight|
@@ -41,37 +41,37 @@ describe 'As the BE' do
 
           weather = JSON.parse(response2.body, symbolize_names: true)
 
-          class Weather
-            attr_reader :min_f,
-                        :max_f,
-                        :min_c,
-                        :max_c,
-                        :day_feels_like_c,
-                        :day_feels_like_f,
-                        :description,
-                        :date
-
-            def initialize(day_weather)
-              @min_f = day_weather[:attributes][:min_f]
-              @max_f = day_weather[:attributes][:max_f]
-              @min_c = day_weather[:attributes][:min_c]
-              @max_c = day_weather[:attributes][:max_c]
-              @day_feels_like_c = day_weather[:attributes][:day_feels_like_c]
-              @day_feels_like_f = day_weather[:attributes][:day_feels_like_f]
-              @description = day_weather[:attributes][:description]
-              @date = day_weather[:attributes][:date]
-            end
-          end
-          
-          
-          class WeatherFacade
-            def self.daily_weather(weather)
-              weather[:data].map do |day|
-                Weather.new(day)
-              end
-            end
-          end
-                    
+          # class Weather
+          #   attr_reader :min_f,
+          #               :max_f,
+          #               :min_c,
+          #               :max_c,
+          #               :day_feels_like_c,
+          #               :day_feels_like_f,
+          #               :description,
+          #               :date
+          #
+          #   def initialize(day_weather)
+          #     @min_f = day_weather[:attributes][:min_f]
+          #     @max_f = day_weather[:attributes][:max_f]
+          #     @min_c = day_weather[:attributes][:min_c]
+          #     @max_c = day_weather[:attributes][:max_c]
+          #     @day_feels_like_c = day_weather[:attributes][:day_feels_like_c]
+          #     @day_feels_like_f = day_weather[:attributes][:day_feels_like_f]
+          #     @description = day_weather[:attributes][:description]
+          #     @date = day_weather[:attributes][:date]
+          #   end
+          # end
+          #
+          #
+          # class WeatherFacade
+          #   def self.daily_weather(weather)
+          #     weather[:data].map do |day|
+          #       Weather.new(day)
+          #     end
+          #   end
+          # end
+          # 
           class Trip
             attr_reader :origin_city,
                         :destination_city,

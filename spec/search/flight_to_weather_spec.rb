@@ -94,7 +94,7 @@ describe 'As the BE' do
                         :day_feels_like_c,
                         :day_feels_like_f,
                         :description,
-                        :date,
+                        :weather_date,
                         :weather
 
 
@@ -121,7 +121,7 @@ describe 'As the BE' do
               @day_feels_like_c = weather[:data][0][:attributes][:day_feels_like_c]
               @day_feels_like_f = weather[:data][0][:attributes][:day_feels_like_f]
               @description = weather[:data][0][:attributes][:description]
-              @date = weather[:data][0][:attributes][:date]
+              @weather_date = weather[:data][0][:attributes][:date]
               @weather = WeatherFacade.daily_weather(weather)
             end
           end

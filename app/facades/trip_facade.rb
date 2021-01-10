@@ -6,8 +6,8 @@ class TripFacade
       lat = flight[:attributes][:latitude]
       lon = flight[:attributes][:longitude]
       weather = WeatherService.get_weather(lat, lon)
-      # binding.pry
       trips << Trip.new(flight, weather, index)
+      # binding.pry
     end
     trips #return value: an array of Trip Objects
   end

@@ -1,0 +1,842 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3001/flights?date_from=30/01/2021&date_to=30/01/2021&fly_from=DEN&limit=20&nights_in_dst_from=5&nights_in_dst_to=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '27386'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"777","type":"flight","attributes":{"origin_city":"Denver","destination_city":"Las
+        Vegas","origin_iata":"DEN","destination_iata":"LAS","latitude":36.08,"longitude":-115.15222,"price":48,"departure_datetime":"2021-01-30T16:18:00.000+00:00","arrival_datetime":"2021-01-30T17:19:00.000+00:00","r_departure_datetime":"2021-02-04T06:30:00.000+00:00","r_arrival_datetime":"2021-02-04T09:27:00.000+00:00","booking_link":"https://www.kiwi.com/deep?from=DEN\u0026to=LAS\u0026flightsId=0713244648e10000956fd20d_0%7C2446071348e60000bac08674_0\u0026price=40\u0026passengers=1\u0026affilid=picky\u0026lang=en\u0026currency=USD\u0026booking_token=BdzZKxPV1MUHwH_-JG5QGFnIz1t5vLAQFHxol5i22sGKMQ_r8pGl5eb5ts1BJ_L2tukgRnAiVP6chyj-xZ54hEu3L6uwO44FrLLdEHFDh9-km_dabhPFxYiMbAA0sd8rRboLhOqEGqtQQrwdfASQ_rFNKbm0aACkBk91qI8csOKGR_8hGCb8kHx1SUu864oVYFFWFwxkTQ_0fIm_A8j7Y6FH4Oy9o_I4JhocJmZUZLz7xGYG9vOhDkVXFKAbFInLJZrpY3DrFSeZ0JNK-sqA-8fl2MxYGRoBHZxcWi2-lMif8GlWXi-kFbSJl8ZahBQy12I4g1YnmMHtff5mgQ7cpmovXye6_ppNqvWK964HYyu8CFV7eJKeLkS3U654b-gghvruy5SeUomQDkftwFkgrBziQw-94zGEbflz6xw5cV3r6kJ9O-_lmROyWTTtwM1tqMrFpL6TK-QfpfRJWI8uGUrXFrxRn6dDZls_TKtaRk2Kgdgm0IM2xbK2NCPzpi11TEU06GIyprHbHR53HrwZuB9rAKLSzgIG0elobX-DtlRUtPDmDmqxRH8qkM_OGJq6oGDgFQ3XVgTz6QY2srzBGX4y6065qI8GWXcStsyj0-l48wR_DJmu0Iui_2G3LMuFztp4ApcmeoXqzD1Ux2zpviQximYjqcwmr1a9Gb0nh9TE=","trip_duration":5,"id":777}},{"id":"244","type":"flight","attributes":{"origin_city":"Denver","destination_city":"Houston","origin_iata":"DEN","destination_iata":"IAH","latitude":29.9844444,"longitude":-95.341389,"price":49,"departure_datetime":"2021-01-30T20:30:00.000+00:00","arrival_datetime":"2021-01-30T23:50:00.000+00:00","r_departure_datetime":"2021-02-04T14:41:00.000+00:00","r_arrival_datetime":"2021-02-04T16:19:00.000+00:00","booking_link":"https://www.kiwi.com/deep?from=DEN\u0026to=IAH\u0026flightsId=0713230e48e10000bc138aa9_0%7C230e071348e6000063003075_0\u0026price=40\u0026passengers=1\u0026affilid=picky\u0026lang=en\u0026currency=USD\u0026booking_token=BhGmF19sVVgRUIHoWW3ZliWQv3CT17F1XdoFVvkuLMokmTZaIui7rqpWm1MAKimz_b-elE65D4GLXQeeVBViOxtdmdPGJrI7rOv-qb5toP4GZqntS3Yp9dzmOdY3KuNexnP6xMjUI1fXgDEUKKdRz34D53ihf3dmp2mhoR8fIw-G9_04HztY4hLyTaqwVIAZitYVIeT9BQGuKAS_c9-B1E4hK77FIevhL6vbOQeQ5dNfBTfgVNSwxhrsHgYh4-WL9bfIpKZLf1MAwlF_qY3qLoGe8mTC8qISc6so7KxHPKT8MZwO9CRt7C2yct8orJ7BZ7SB6TWTxqiXR1PpsMdihaIu_CQsAoucFV57fgOYFcGzRo65w8RntTx7Xxt3ZKqG8h2IgZQ3UCLyBMsfelhGm_XBySSuhXjXDhuX_y_ZqwbLf2pbJH4L5v9yArfgj88sGKTpFAqM8RwNzVhi8QVFzDHQp91cnhixvVo6RUZKS2TMXXb9En776m_E4K3_KfDo_shwrn5DC8ABda89q1M7ub74T07d6AMp5MLn-uknASGznj_z9ye-SaKlf-Bnyd-MFqpE7g00_RHx1fYZz9KpCuYUXbpXR8Ou2qVzHUo_5JJPgZ2g1mw8Y4pSKM1jx_ObRcA1KIfd4asOv4-W2IxHflNpk5Pmm87Vn5pp8Mkbpmj0=","trip_duration":5,"id":244}},{"id":"755","type":"flight","attributes":{"origin_city":"Denver","destination_city":"Phoenix","origin_iata":"DEN","destination_iata":"PHX","latitude":33.4341667,"longitude":-112.01167,"price":64,"departure_datetime":"2021-01-30T22:01:00.000+00:00","arrival_datetime":"2021-01-30T23:59:00.000+00:00","r_departure_datetime":"2021-02-04T17:48:00.000+00:00","r_arrival_datetime":"2021-02-04T19:39:00.000+00:00","booking_link":"https://www.kiwi.com/deep?from=DEN\u0026to=PHX\u0026flightsId=0713042e48e10000af8849fe_0%7C042e071348e60000b91dc4b9_0\u0026price=52\u0026passengers=1\u0026affilid=picky\u0026lang=en\u0026currency=USD\u0026booking_token=BdkVKuueGSlBGM3rIx0bMuv_cDCyVYdQYb_USsLn3L-Qg9JwsnLpZ060EkZiyuABcOjdQO3b4LDOk5e3TYX8xtZRidjr20ngtlHHkGFQtndrc3faAIwASaJBueGNLHmkIf_OdWLjPNxOvm4Fwd7UJzMI5sxxPND2FaNd2zj7coPiXTC5FRTczT1al_U8_h0UZn_K0sY9MxDcPYgfX-bu9Py0TxJn_wk1wYMkjb5nuox_3xxNFBecygJXyrXvk4oJK3jlXaGsn1vgf70Qx9a_HrzOoi_qcf_UXWRoLzCyG2cFquTBAdFAVtHZLVPhM_Bp4AtVp2yxQuKmhgHIDzGO9TovwFhlEr8AimikAVs4hBX0IqDtN2hPFwmSygaUhaLVwHUqTTutyUNg38HSfgZixbcEfVDYKNagBXFo0-Ny5VyX6xP37igPCjBmCcBe_gfeFpGboN-LQvwAz9A3yFCpU7HqagPaV-RxDlsJ6-Wfc9gkb98P7-yQeZk7iFWFh-PM6K6SRqgllzx_AEI4-RWkb6euhCJJEU1C-3O9z_wlvsD-GmjX_9PZ_GfqB4Fq24HHn9crt1B_xODFgvXkGwcOgNUjw-Z_j1NPieL8ElbLGkVBjGKCZHRoq3YWKLEjcoWUxonyUbWrDXmfphpHuWpTi5hs55iU7keN9d9b6YTY-Hpo=","trip_duration":5,"id":755}},{"id":"614","type":"flight","attributes":{"origin_city":"Denver","destination_city":"Miami","origin_iata":"DEN","destination_iata":"MIA","latitude":25.7933333,"longitude":-80.290556,"price":64,"departure_datetime":"2021-01-30T11:30:00.000+00:00","arrival_datetime":"2021-01-30T17:15:00.000+00:00","r_departure_datetime":"2021-02-04T21:09:00.000+00:00","r_arrival_datetime":"2021-02-04T23:39:00.000+00:00","booking_link":"https://www.kiwi.com/deep?from=DEN\u0026to=MIA\u0026flightsId=07130f6b48e1000064866302_0%7C0f6b071348e60000d6d81c91_0\u0026price=52\u0026passengers=1\u0026affilid=picky\u0026lang=en\u0026currency=USD\u0026booking_token=BeNkCrQThKorKCyWUNF6u8HET5vD-zq-o_dzBb8bhUDGMefs2iX6jV6lrkBHRNA9ckbM6zpYtj5H49E_0OnM6qARZp4hdoJ9csMV4co30rmfLignH2qttlXFf7SIydD_mNgij5B0twV9qeAvjz8qj0p8VNlNcFPUa48r2Op_OeD0BDLXYTDFBADMBmffpe_g0ogr2Aex67gPWFVBLJlnLEaxgd-FPnlkxG0DziOcDTr5JggyUs8gR3-jICTdDdgeFUqDbuIfVntYbgi5gVGzaNRaeanbRCnXqbj_HujEqpFarGRL93R62XlEr-fGv255pJ0Y9cQOu95vWuvZTBtJehuTaZfz9m8qmPKpWyrtPcodeVSqcOtXsBcqN4TSS1UE_kIWi0Wbxw2-QOCfEQ7JBAIf1TJJZSiLJPkS4p97pdCYveKdztonpvTRgHSmDejOzto6lUvp2NI6zzcfuWhlDfdZiZFBuTJipTZSA6x4SCHgRK4X_lrJ3tm28fxpzAaMF7NEi1sL2ExxU1D7zG5Lpo-hcc3J8T6t4QyCN0hXpd6SRpInRqKO5gSRlMyiYssm60i8jJdE7MJKzY3EwUaMsIOF8_yLMgPQoiKUSFsxwfASe3X-K3X_JZunl6WtVZ3vptebS3XA98mgpZI9otTHpifA1HfVmgQ9wDELhUf0bEgc=","trip_duration":5,"id":614}},{"id":"262","type":"flight","attributes":{"origin_city":"Denver","destination_city":"Dallas","origin_iata":"DEN","destination_iata":"DFW","latitude":32.8969444,"longitude":-97.038056,"price":65,"departure_datetime":"2021-01-30T20:09:00.000+00:00","arrival_datetime":"2021-01-30T23:03:00.000+00:00","r_departure_datetime":"2021-02-04T06:45:00.000+00:00","r_arrival_datetime":"2021-02-04T07:58:00.000+00:00","booking_link":"https://www.kiwi.com/deep?from=DEN\u0026to=DFW\u0026flightsId=07131b3648e10000df218950_0%7C1b36071348e60000c73d91ae_0\u0026price=54\u0026passengers=1\u0026affilid=picky\u0026lang=en\u0026currency=USD\u0026booking_token=Bi8y_D1T04D1Rf9HDWuWH8byGj2bZjqjLnEt500S7BQHYa04TgX6ZAJ0PX7IMKzbWYsTJc9wzHx1wg5AfgASHpc4_7Xa-zC5wQHrzQVA2PEdZSqebeRqKAyi4QxZgT8pCezj-u_gxoKigXbI6mipC7AQ82jzBu2M87VH6FodJsIqyYHO1bS7Q7p0TpBfcjM_YD4Jt-qS7ezzJa5wJgGcHFQ6drTeCa4YhIncXyIgIPZXEZOXe8T8k8Y1YxFIr03oaE2nciIsepHP99yx7NA_9Ws2Y-8fPbB1u9Qkz2FptVNrVR8NdxlNOvpotkb-McWPJbymYxX0QnYS_fZNfLRWmuH3TgTovxX4eiNKWAbm229c6HtrnQcM9JhxE5UOlWs1h9f_IDoA1aJjyzuOakCoVQfljSOVBXmJ4QDd1aWuTLwIOaALuLWBn-JDuuHgEt09WWK43HlWzZK7cvEfiiz6Z7_n7ZH8k8qMXLZ3poRSeDtaYUqQ8dSbkTHnQv8x9X97zPjwECmFwsbNhE5PLndWFzSdTyc6NrnL72tcg-8SSTADIijR7hyvKtRd5tMyzWZkYNF9KkZlcnU_FUIHrNzmC4PD42MtnOnwrI8-60MQVko_hEddEMRC-cBdZDVTsRrSSZgB5gMIAcQPtFkpzCJ7FIQDRjkRkqPlaWoGa8CtmP9AjZBWoogCkHD7Mv-WceZla","trip_duration":5,"id":262}},{"id":"573","type":"flight","attributes":{"origin_city":"Denver","destination_city":"Salt
+        Lake City","origin_iata":"DEN","destination_iata":"SLC","latitude":40.7883333,"longitude":-111.97778,"price":67,"departure_datetime":"2021-01-30T22:25:00.000+00:00","arrival_datetime":"2021-01-30T23:57:00.000+00:00","r_departure_datetime":"2021-02-04T07:00:00.000+00:00","r_arrival_datetime":"2021-02-04T08:34:00.000+00:00","booking_link":"https://www.kiwi.com/deep?from=DEN\u0026to=SLC\u0026flightsId=071308d648e100007af85f88_0%7C08d6071348e60000277f0723_0\u0026price=55\u0026passengers=1\u0026affilid=picky\u0026lang=en\u0026currency=USD\u0026booking_token=BAcNaXMquzzkmEmYAh1OkwdU07rTH8abo87yF4CZTTSrNH0LbwaT0J4MWSHZo5ap5Gx86lRhWMgJbY4RPOkBhvnMITzIc_DhFyqxWwYSwV6AcnF-LkEewYMPmE-6P5CvlrexrPoWoLwp2QCjjcHdKahFs1Anpjr-QCBZTapk-b6ODEf_ueA7XS8gaQpS0tSBgYy9WWyol42enZ99xyWyjMFxO5SMHN_A2Y84NXn6eEs3ZLQgJLTXOtoka7hzLADQ_N1XSieL1W8maEGWs5YDKzT8OoRsC7JhUES4fol_o55rqe0FXIx7UJuHT6aJrfkfYs5h3DaKA0telITz7NhowsIZQzSjE9-Q_q2H6m6ndnjDU62nHD_AheDO6TM8_23J77FB7wdqmmUOXYQzSjqTNL4XHSA41mb8_O0pD-gC3O6aipTEt7eIxDjciFsZJAtzPiSgkxhaxNh85zTuPghU5YMqsDHJNJAjjBjWiQGclXbk69s7z5kP__A41lI6bHd7h-EOCv8I4tYbOpozyzIagYNZ4lZNrhJP5qtUWAR70cJNkxRencITkkzDg2Z4sBdsClzhKYxdiGoL149XjP0rtcGRollo2uPEtQci7TwRSXq03UcRfDd2Hil6IyrJVcByr8xZEiqqg_84ehU-9uvsKYTgg3nWPml1Tls9Zwvrwbsc=","trip_duration":5,"id":573}},{"id":"418","type":"flight","attributes":{"origin_city":"Denver","destination_city":"Atlanta","origin_iata":"DEN","destination_iata":"ATL","latitude":33.6366667,"longitude":-84.428056,"price":67,"departure_datetime":"2021-01-30T16:34:00.000+00:00","arrival_datetime":"2021-01-30T21:20:00.000+00:00","r_departure_datetime":"2021-02-04T12:18:00.000+00:00","r_arrival_datetime":"2021-02-04T13:47:00.000+00:00","booking_link":"https://www.kiwi.com/deep?from=DEN\u0026to=ATL\u0026flightsId=071303a748e1000063621d9d_0%7C03a7071348e60000ea83337f_0\u0026price=55\u0026passengers=1\u0026affilid=picky\u0026lang=en\u0026currency=USD\u0026booking_token=BWFVq1XcZQKIxst4-szBDQC77SN3fox0XzKfQphGhF2325x8fGJpdjPc7vBIp2L0KdNklX3ZMCAQo4C8QbjQz59UTdjkrcNWXOhmJ3ewkMu1Y9xp1vth7i4VB-hWTK9t_KklO61MqDsB-_6Z0fCHfeFw9pTPmZWeIVjfOEVsy0UsVaNIH347qD394HYly3I7K_kuBaxTPOIT0tQUSpu2tJzA8YK4sZpEdENFWh3zIIIrcaQ2XLk1SfSHsuqQnB_vkMqAZpfm7rK9mz5Fq-Xi13JmRtXe3Kz42FPKlXxOUOavOyeIQ1jDw3ZnRwZUnuLRDPm7WT6axWvE-8i3l587E4BIHmB-snIW3sWn2pWKUhn5lwcLfSJZO9xcOepMbiMfKvlpPu7dlus50bQn6Wa-g6i3U0KtyKsxbAsAOaEp5OdwyZfqm0LnW3cfwF6DcPKU4Hxs9psQgYVCfcYHOAvJN4Qs3CNup7ienlXN3urcTQrFb2pkTNqn1ID0B8FBdyxft7m8FQ1_K_d6bMhyQQaAjMXni2RzCIsqXAyN9CXlSipiPyfWAJ4Z15dyfhTl0kzmXre8s9YY7sZLQsx5uGC28sqQaBJiVh6JYHmIay6asq89nqLgAXaEc52fHQT6q_uNl6OwD1Rqo_1G1nQ36MLmoJylSBW-dag6nMADEkxR0m9g=","trip_duration":5,"id":418}},{"id":"1473","type":"flight","attributes":{"origin_city":"Denver","destination_city":"Los
+        Angeles","origin_iata":"DEN","destination_iata":"LAX","latitude":33.9425,"longitude":-118.40806,"price":81,"departure_datetime":"2021-01-30T13:24:00.000+00:00","arrival_datetime":"2021-01-30T14:55:00.000+00:00","r_departure_datetime":"2021-02-04T11:45:00.000+00:00","r_arrival_datetime":"2021-02-04T15:13:00.000+00:00","booking_link":"https://www.kiwi.com/deep?from=DEN\u0026to=LAX\u0026flightsId=0713243e48e100007b9eaef1_0%7C243e071348e600003a90c378_0\u0026price=66\u0026passengers=1\u0026affilid=picky\u0026lang=en\u0026currency=USD\u0026booking_token=BkYM97jnDnIpplADyx4vXzwe7wwlSmyJ_05v_O-qqxpkPAf_OdiA74Aw2B_co8qdJywx_wv4JayANX_gr8k3xuFOHR5cVHzN-wXsYDBDPAmXwb8skZ1vB6lJE8CykAXbnDCyN8mfA8hB8dRzASo053mC1QNtz8FQZMSzLW2ru8Nj1U9fdPSBOrecR2C_rj1rC1qvpF-WNE26uyL2GFe46FUx_4nSrSsETMydWAbjoY5uFDCV-ugWkQLt8GZ0yDpt_vlghRpeep_xFIW7g7--msNE_WWVQoTixgYC1XV0YUhk8eEQW2XsWNWfmajnVOKy1zMvuQBMHgjm0LbsgPBlipaqWs_eR7f2le-ilMLI4L1uQmvo2XEvuT5JZvOrVXImvtxWGkuEVK1DxvMNC1IEuHGQ5ftUVwzdJ5SlfEi6g8aZHlK8Pq1sAgfR7SSMCks3vS-2myCkp0AlcgsW0X_c0f1GCcy75AyVppOFe1uZiVPTsuahSNhHLPIPEuvnkCv1WALej9bbeXzgmYUnJZ4xv3SZGyFd7kTR8T9-yg9odqhR0k0OxCTLy983O2t0H4wWpq9NyKJOlNBroHEKmWPyarQdBGvw6iXoTjtmZfZpxS8YeaCF6sm4yckx9SOH4ZUTzrX74ApIVv98w7V068BVF6iXnUnXsTy65MAQxQlHjYibA2xoXPDAZ449PKhJkYaDt","trip_duration":5,"id":1473}},{"id":"486","type":"flight","attributes":{"origin_city":"Denver","destination_city":"Fort
+        Myers","origin_iata":"DEN","destination_iata":"RSW","latitude":26.5361111,"longitude":-81.755278,"price":81,"departure_datetime":"2021-01-30T11:09:00.000+00:00","arrival_datetime":"2021-01-30T16:44:00.000+00:00","r_departure_datetime":"2021-02-04T20:20:00.000+00:00","r_arrival_datetime":"2021-02-04T22:38:00.000+00:00","booking_link":"https://www.kiwi.com/deep?from=DEN\u0026to=RSW\u0026flightsId=0713058948e10000cab1e805_0%7C0589071348e60000e08b324c_0\u0026price=67\u0026passengers=1\u0026affilid=picky\u0026lang=en\u0026currency=USD\u0026booking_token=BYiPL0kADaaUhaGzNrAYzpsNpDw0-gSXrjY9MrdUKSYbtoZcvT_CVk_pPIt95g0yVf8r0M-yNQfMm6ETNzBSnkvNH3Iv0Y0thvQywLRALlKWGc69ZiWXjUQ1Na1xrnAYzKOzM8Dwi_lMh7NIkNWE3goTroIL9TeYcEPKzO2fTMDa2aRwlxyN50E5aNwe-BSjQLZjKjondG7ELveiXnIi3T-xaZ3QAhuMhDcC6X8Csjvvz7yjwYwgdhA600yoVh4-mtvLu1ajWPJMW0-3Eu4-FKxHJtHoC5Vl-ziH-23SytjdgEe1oOYlVMo_EQk8gz6NfwT-KnE6787KRDFIhFIcNwCgJOAZIxPaTccPf4QP8cD_MOL5DQhlWJY0WaWE1Nfgz60TsWdsDoQkXZTbyTCq4yKrQx4o4C1YP_MiEbn5vpUiBIj6ddopR9VNqx8a1cvxlwHqCXcqAo4jy8822fdSHml2QfKLmYXBJzfTy_MIiKOkLm4YfFDD3M1V8IppwKYeFuXtIwC_OzEFYIXUdWugJA5iYzbw-goENRGH7uvAJcrB80WWlHs7cwQykBbg0KVsPomCbhL1NdxBdot13POU34awt3sAB7qGlWR1Z16uikKxIdwEmAOGKCbcoUjtooIYWQklu8p3BaaglKNP62x3QXW9uWsk-pn5azPLL3h-F_m0=","trip_duration":5,"id":486}},{"id":"2030","type":"flight","attributes":{"origin_city":"Denver","destination_city":"Philadelphia","origin_iata":"DEN","destination_iata":"PHL","latitude":39.8719444,"longitude":-75.241111,"price":88,"departure_datetime":"2021-01-30T09:45:00.000+00:00","arrival_datetime":"2021-01-30T15:17:00.000+00:00","r_departure_datetime":"2021-02-04T20:34:00.000+00:00","r_arrival_datetime":"2021-02-04T22:58:00.000+00:00","booking_link":"https://www.kiwi.com/deep?from=DEN\u0026to=PHL\u0026flightsId=0713231f48e10000e94c3f23_0%7C231f071348e6000090a4963b_0\u0026price=72\u0026passengers=1\u0026affilid=picky\u0026lang=en\u0026currency=USD\u0026booking_token=BUIkDbtLNMWlDZwbTdkI_0UyUKsOiGoUmNk41BokcXX9vuAJ8oRtJuyta3x2G4F8YkwSD4Tw44DoRxs-rYI6YUB03Lm4p0zXS4-Ez58jDwBn5p7jVxLi4hKelVpTgLsJLfTykH2YZhpqhhlGZ59v2EJNO8QYTMPJU1c6rVaGA4G2CtuwwljVEN31mL8J_h-5jcIIxgsvdkh1moqiq1nDEepCuIwZ8n3guSPJGP54E0VIMfI6nuHCvaR2a8DufvA8gPY2bprEEML67KDBuCuMHKQeau1Dlog2ab14JenADwZQeOUQHRAwLjJcGenMbQqirHeV8RbkihnsnadmZxX3e3p2rwZK6rxUvNXKi2FiJxT6CIWacl6joQ8qMJ2xTohu6nJ1VctL2XKyYk_O1IEp2mXD1D2EeKL_edCkoW0TwEtn1Nz03nulROABRfr2iSB6aidtlsWtwJiq38e-r3OuxxDPnvho6JG8LqBiz11Eqh7OJNWzDSzU1LSwYPVY3oAI13UgL6qC9UwnnJgiCP9xo1lVG_VPKCI-mUiJl1HBHzvafL2nQd82zUD8Sbu9hKdncZl-E0tSZTtf3-OqxnwKusCB9oNYptCp9Kn9vAjfQS0orpKOE4NbjmMr6oFVJpaXVM_Aaz_aJzCbzMkgbajdGZPG6KiQlUhfwyyK5fMxbcH4=","trip_duration":5,"id":2030}},{"id":"1026","type":"flight","attributes":{"origin_city":"Denver","destination_city":"Austin","origin_iata":"DEN","destination_iata":"AUS","latitude":30.1944444,"longitude":-97.67,"price":89,"departure_datetime":"2021-01-30T10:05:00.000+00:00","arrival_datetime":"2021-01-30T13:13:00.000+00:00","r_departure_datetime":"2021-02-04T19:56:00.000+00:00","r_arrival_datetime":"2021-02-04T21:18:00.000+00:00","booking_link":"https://www.kiwi.com/deep?from=DEN\u0026to=AUS\u0026flightsId=0713169248e10000ad46044b_0%7C1692071348e60000994622cd_0\u0026price=73\u0026passengers=1\u0026affilid=picky\u0026lang=en\u0026currency=USD\u0026booking_token=BFioP5wtlIuP8puFAAaWEB4F2osVPvBQ33BtkPg0MMgSxVvrwVSERO35-KF5ecD4xwWuWIig837w1Wqn3VUPUrfWekcC2YM_TycMTOsuEGmYryIaXYo8Qj0mlNQG8Mp3TG9XnQdMsir782l30zc07ckAgfqEpmB8xnvvNDaGergcKw4F0yqj_j1hb24Fg7HquFjq548C2U0PRfSFqVBxkpCo5VaZCFEx95S_9WlzT1LHv_XQpm0PlvTblOlbWq_3T-kIkX8q6-uvgj76YpXqvDikF5zPFoVBFV3cO7hHvPbVJKPC12-xxmC6LijkhW7MtzjoPAb4dityBWn4x3NHf8rLKrOHBdjEofh3OIOVmdpAp_1pa8ZfCF70RG_LTDH37ykdShB8r72pGMfFxWrowEMSorxb80pFWSJJwhhlkxNij8tdvOWkQbxR9qIeD9pJ4Z_xOYfmOlhrmdMf51AkYrqD9WgfpLooa83nSzU-Qtvn9DckxNiQFCjmC4gYsaWLp9e_se-GFiNsZ4stjIOD5OGG0Eh2_J0rGC-jX61O8PbzTYeg9Z5bzL4oddFIVOfLBwk4hpHuHGwzd_NjH-x3xaCVIcC6waS5qxc0Z2gMgebBhIjJcCYS4L-DtPRN33FeWBsYE2c0rgRXXJ6fMZBFPePiWF5Ib3eAB5LK7CWf1ceE=","trip_duration":5,"id":1026}},{"id":"623","type":"flight","attributes":{"origin_city":"Denver","destination_city":"Seattle","origin_iata":"DEN","destination_iata":"SEA","latitude":47.4488889,"longitude":-122.30944,"price":89,"departure_datetime":"2021-01-30T12:30:00.000+00:00","arrival_datetime":"2021-01-30T14:26:00.000+00:00","r_departure_datetime":"2021-02-04T09:05:00.000+00:00","r_arrival_datetime":"2021-02-04T12:40:00.000+00:00","booking_link":"https://www.kiwi.com/deep?from=DEN\u0026to=SEA\u0026flightsId=0713204348e10000de0c1835_0%7C2043071348e60000002047de_0\u0026price=73\u0026passengers=1\u0026affilid=picky\u0026lang=en\u0026currency=USD\u0026booking_token=BxelpicB5ZwKAnZ6jWZIlyYPWVnEYTYk_t0XkiNiGWpOaTDOBEtOcia8ItUGa4BYQv_0xwbxVANU1If5IT6Zz4wvlCPnJH-c9kfwG1Ncc1O876hA3Zvc_yFAL2xNOI_V7sBOzi-5LzGzRURMXFMgmJwFPrEzNrelki3md7cpP3KQUDRMZOMidnLBV3ZnI1lTUcQZA9srMqFEIL9iGpe8i2DL3UnBonaaFM7h0pTpUDxzs3hctvZpSAO2xDYE7493f0d4C5U81R5D5phF6ooIo4kQ_l3urKQiRohH7ABYtyOm18z8OClCRCSO0Hk_7m5SNX0RbPm_9qiWgxtM_H2XFgi4j1xJbY0UWD68M3HWft7XaBmCbYFwCsg2qoMb5dUovy7qfwqcZTrgwH129_ftMk3e7Km77D9R0FgWoAMhrYv9ykZm_NQ_To7K-ljWKa0qEwEuuebjV2W0cY3j1PCe9aYD4H2O9hZZ5I8O1tH80zRtc_GKnpyikypCcMKo2CIfkdeTlMLysWXOMli5CLcrLygsax05EJ6LulV7y6qSReFvDinCd5B_E0QFjQoa71nmL9o49waGuzlQgsFeVvUM_vXxQGAE8NZAQ5Ka6LDp-BpY6MbNb5LJKGjN4J-OcD_Mu0fTPvPv-prrLDYPgQiyLQiKfLT-UAWo-Z6tmHUJsFgBrfUfQkWvIQG3o_809DFoesvwM5GPMQXrONqSgY2FfgA==","trip_duration":5,"id":623}},{"id":"5485","type":"flight","attributes":{"origin_city":"Denver","destination_city":"Charlotte","origin_iata":"DEN","destination_iata":"CLT","latitude":35.2138889,"longitude":-80.943056,"price":92,"departure_datetime":"2021-01-30T17:46:00.000+00:00","arrival_datetime":"2021-01-30T23:00:00.000+00:00","r_departure_datetime":"2021-02-04T17:32:00.000+00:00","r_arrival_datetime":"2021-02-04T19:28:00.000+00:00","booking_link":"https://www.kiwi.com/deep?from=DEN\u0026to=CLT\u0026flightsId=0713205a48e10000fa661e3a_0%7C205a071348e60000a31ad80a_0\u0026price=75\u0026passengers=1\u0026affilid=picky\u0026lang=en\u0026currency=USD\u0026booking_token=BKP76hVqyT2twm0Z5fzCZuAIKlyKq2Hiy-a_bcAWPSSxA2NPHWPb8poTIscgMLjwlDW2KcqsOp5HEaOrnz9OyVs1WdJAPcUM_oVyJtexzySPcSQ6ms6wSxKOVAm1rP1M1fkMv6xA5tv0m3bd32z_3N9YkobYGqn4mtZ9PtBraLeu3YToG-20w0MZHtW2mcoQ5e6hTQBm5eGq8LsR-BSXl3t_edN49i37cNbZJbYr_htSyhw5zxF5u0tghGZlQ4zzzC3u_-mHUD0CIcyPudKcMPftADGjyqCAzXPqMFF7aKV6QrX28Z9IxIyMg_5G2aQee8iwVZ-mKGxRIl3oI6yPgcmaGkizxa5zVDr9LS55tmKDXIKSNd-T1-oBNj4pUyfMB9S8WuQG-fvEu-BouBw2bncMjbk8gZm0aNys4ucPzncmz0qMfhI6VjVny0nvwASRsNygeIG6F36tHbpebso9nF4B-xsyIhFJQrvT-4YGf69QKnnz98PO5FKIP7QNX4Y_kz4I8C-C0Sh130bZT1hu8M74x-v8YAVxD7KyfviK9NHhK9pD9D5Yn7jPci8mvNCE0VA10stvLtbpO2Xuhqbi_v69u5Dpo0VdB_NMDVqfFrz59wIbzTyRZHK9Nijr9Way7U6Q3UPrQYdaP1r0PQRDgGyElcUDC9_TcuksQqKI3gsCtQwust24HUYVzgZ6XOQQY","trip_duration":5,"id":5485}},{"id":"1068","type":"flight","attributes":{"origin_city":"Denver","destination_city":"San
+        Francisco","origin_iata":"DEN","destination_iata":"SFO","latitude":37.6188889,"longitude":-122.39167,"price":94,"departure_datetime":"2021-01-30T10:10:00.000+00:00","arrival_datetime":"2021-01-30T11:59:00.000+00:00","r_departure_datetime":"2021-02-04T10:54:00.000+00:00","r_arrival_datetime":"2021-02-04T14:34:00.000+00:00","booking_link":"https://www.kiwi.com/deep?from=DEN\u0026to=SFO\u0026flightsId=07130f9c48e100006ba1ff74_0%7C0f9c071348e600003dbb5617_0\u0026price=77\u0026passengers=1\u0026affilid=picky\u0026lang=en\u0026currency=USD\u0026booking_token=BAhdbiIV63R8fDTowlpz-2ggvHEFDJ_aYFqUaJ3O03l-Ihu9Ys8_Ce-FtVNMfoKqWXULm8SMJWICV8A0E0vzu96F1aloc0B31gYHTtguwlCBT0cJ4rvJ-keg32lvJheloU6o5pvwmB8YyGVYqIGdNx6w84i9telz0Cgo7OmHHFo33fE2r-aMo837ecmctzu0AyMKHEkQD9Ydm5xjZCq7Rg4l-_GZc5OzFJCtW0HQyDSKBLbde_rkw0dvpdvaiAcsZZoVO8FfnO5mo_nUm_VIdgSkpqSbhf62CMYEUWrvgwHtA0v9vqieb4cd1oH7SICigCRfT6mMlZP2BLxK1ApPKqL-kXhHN9zlg6jJIexZyzB94HXVY1oUHB8W5BURIRHW7MeIsfd98Y95zfwySdEiXUk9ePQbEDTY-g1m5dplIjFcVIwBM0tcMj0192MeiKoirHXsCTVGuCFxHDxEddMum472EFI3D-MhZj0ZMmDtnHIu35O3qDKcv7QkxJGckoD5ilRy3TbdvBgcsKFgchnR5fWX6R_oFHNb_-9ejH3ktOyWxZEWOjAhoKteKIzgDXeCODFumFyVPBUv9mMm8dKOJc0BbNogpMTLv7b-rM-u9ftXR6gWM-ArjwEC7X8lNo-AQGtCXObpRQzn_XUO4F1ZBQX2bbF2cNJ6vLEUhGqUpkLE=","trip_duration":5,"id":1068}},{"id":"613","type":"flight","attributes":{"origin_city":"Denver","destination_city":"Portland","origin_iata":"DEN","destination_iata":"PDX","latitude":45.5886111,"longitude":-122.5975,"price":96,"departure_datetime":"2021-01-30T16:00:00.000+00:00","arrival_datetime":"2021-01-30T17:44:00.000+00:00","r_departure_datetime":"2021-02-04T10:15:00.000+00:00","r_arrival_datetime":"2021-02-04T13:42:00.000+00:00","booking_link":"https://www.kiwi.com/deep?from=DEN\u0026to=PDX\u0026flightsId=0713014a48e10000342bab11_0%7C014a071348e60000d3943faa_0\u0026price=78\u0026passengers=1\u0026affilid=picky\u0026lang=en\u0026currency=USD\u0026booking_token=B1ulol80PntLBH5kYd7Uw9Uu5Ht6JHxzLlZFu8o2wUXQc_IaKEqJn_35Uirm6leyzzwI42yUBdTcXefFUNMA2y4zYnMSPdoDPooer5rPsb8ZEyMfXUMnD4JbnPW8_7xjOUts-tJd23Bs5G3pCzF6LtDUptxkOIcl2JV7xVkKwMrduB02fzUkwASDV8mpJv84IDsWeEb-BbjdyHmTQfAOM6kfHldWkKfkUrrtYADoiTVfgYz2Xvf6RRyHas-qCW8WAZdQvMTnop1HI867Y9s6yHLzwkUQ5R6Vj6qUe736GRLpZvnhPbVWDYcDDoN8W_X9fCwzDdVzVn0WTjWDtCj1L-UuEPy0ZbCA3G8g1CrqI9F0zaIaP4O8SCDXa-Iqt9bCN666f5S3Mm_pWg1LKFkj4jdKuaBfIry5rYOkZcOQNzhHw825w3wyqLjD8bTWLXMExLhqQhYDPAvygUmxXg4OxOjo2I9ecumFwU4dfQsGgbyyWGoTpVy8dGrBKOllwK3dA5jpaQDxCrMOhiM4BPhj3T2zGxveqZf2mJjDV9I_6-RNMZUbNjth_3X47QNH0xzbYlsJKg0jzoLaIWTrfwYs_cJEGm6pKcw0vjRBrjPdLmqcx-nBIrEZP0m-0OBYw4igMFGtKDDdDHoSE2NPdBI_e8IG9TRh4YDFK27fWYR61oYJbNr_-qFhJroyOfgsPpiVwJL_kjXvO-Ble6PseGHQ00Q==","trip_duration":5,"id":613}},{"id":"1375","type":"flight","attributes":{"origin_city":"Denver","destination_city":"Minneapolis","origin_iata":"DEN","destination_iata":"MSP","latitude":44.8819444,"longitude":-93.221667,"price":106,"departure_datetime":"2021-01-30T13:52:00.000+00:00","arrival_datetime":"2021-01-30T16:39:00.000+00:00","r_departure_datetime":"2021-02-04T19:51:00.000+00:00","r_arrival_datetime":"2021-02-04T21:18:00.000+00:00","booking_link":"https://www.kiwi.com/deep?from=DEN\u0026to=MSP\u0026flightsId=071313b748e10000b4424e27_0%7C13b7071348e60000ff3ae379_0\u0026price=87\u0026passengers=1\u0026affilid=picky\u0026lang=en\u0026currency=USD\u0026booking_token=BNLRVKHcfKgt2AF_Pz6TI9rpsmVF30a6Gj6itxc2MnzsCe1sOCLctmv24SzlfxWwJ7YZriVtuDlW6LEO6MiJgJGUb8r0zOtEJv2QeKyvaQeypD13WNNJ911DA2jgVthQAsDKuDjtFK61pNWcFBKQiZodjBGFeGkkJOga2ncj62FV1k8hl_IZgtgiNzzzYeAtax93GMLnXK6IBF8K_UJC3AzmvJ9gknsxx32iK5lKfKM6PX_IXx5cShyws1FTJnvWAOhyGfzPcuztrGJBK4fwiO9hMT0lV8G5ThzFzAyf11JMI7_ZxgtjUARwyB2OM815ahSiYB130ou_ueqCaegOUBIlqLUvgPl-sHD2yYPkgbUdnswieZm_B0p8W4P-DDDjal3rScjP_h811O6k9VrqwuO3hdpZo3n3w9DPgaLOUdkS1_cR_xu3Ng7NZkSfsaVnyXV_i-RueL0XL1q6QSJPBEbZunj4YbF-AZxzldLARQBChBIc_aeCjZQIlVmUS_v32BscdLGBcHP-E9mXSZQXBqJCdGhN5YopIQuI8h1gWp418gyzagNxcG-pI0qbVL_gXaLolIJO1KDkbTbsBbM85XgEnrTnvs8Ro38plQSJayrLGhlR7avyBRFX0G9C9lzuX2DIJwLUDFq5cXwe4yAh4W7MBdKIeRmyy1XHR5CaBoreQU6lSV5IRSNe3MVqWcDlW","trip_duration":5,"id":1375}},{"id":"1508","type":"flight","attributes":{"origin_city":"Denver","destination_city":"San
+        Diego","origin_iata":"DEN","destination_iata":"SAN","latitude":32.7336111,"longitude":-117.18972,"price":111,"departure_datetime":"2021-01-30T11:16:00.000+00:00","arrival_datetime":"2021-01-30T12:46:00.000+00:00","r_departure_datetime":"2021-02-04T13:46:00.000+00:00","r_arrival_datetime":"2021-02-04T17:05:00.000+00:00","booking_link":"https://www.kiwi.com/deep?from=DEN\u0026to=SAN\u0026flightsId=07131dac48e1000052d3e6f3_0%7C1dac071348e600005a6940de_0\u0026price=91\u0026passengers=1\u0026affilid=picky\u0026lang=en\u0026currency=USD\u0026booking_token=B-ajwa0x91OXByaqch7DTRuJVPinEH-ztazVZJkn0ySGngTnD1QZWtL208QEGfr4FjP_tID_Msws_TRomFFQrCb_FA7i2LmwrrfOxXHLgf6kY36f3gZiElLBObhRRJ3eIwPLzbOISVpJnhXPsJc1GsouHz24PHz8tURCi4mKbHuWxnTst8NBW2gbo5qI8o14uZudRFqGKXCIupfsSLeMcn5EJ_5vSlbOvUgoIf7kf3R05c-8otqyr_IdKCFfJJq9zBOVIx9JRgt8bK8Fz1lqxcgCBBPDApgu7q9o7ILRdhxdQQuyp70mhrgGPX40yXcnweS1jW5FLZEw8oog_4cq5IXuqV1GTaLaATaGYOyEzZpV265TWVvzPfqE_fTT1XgAJHt2tmTt2NMILiLsGlSYJ729fEgCLyygl8cuUQToTPNLbjGQrYS8cFjGvyO5qCAS2ZTQD4Io31G62OUcHHFGAmoIHqg0mw2E6VwcDBgqe0apZcV97uGcsau5JoeARytk69wOWmRaIh2enS1a2q5Y4jTRx0W7YNv41_BDuzZyltr46utDsbofFUQ4xnihHCyoI4l8VnSIs94OMR2IEUXZqy2LIC4m9G9PWVZUgn_4uaSc_qMCaJkckgOfJii2Y12BU2PDQu_VBIJ2Q6pMaduZJadGoP5wJdew8G4hrrzHDuJM=","trip_duration":5,"id":1508}},{"id":"1417","type":"flight","attributes":{"origin_city":"Denver","destination_city":"Raleigh","origin_iata":"DEN","destination_iata":"RDU","latitude":35.8777778,"longitude":-78.7875,"price":111,"departure_datetime":"2021-01-30T17:45:00.000+00:00","arrival_datetime":"2021-01-30T22:58:00.000+00:00","r_departure_datetime":"2021-02-04T08:15:00.000+00:00","r_arrival_datetime":"2021-02-04T10:18:00.000+00:00","booking_link":"https://www.kiwi.com/deep?from=DEN\u0026to=RDU\u0026flightsId=0713217d48e100007f315078_0%7C217d071348e6000030d4e0ba_0\u0026price=91\u0026passengers=1\u0026affilid=picky\u0026lang=en\u0026currency=USD\u0026booking_token=BQRiodi3uYPwck1PkdLKBtmsOxaEqDWJLtgq3IBraCF0Jh2Zvv7x3lIhX-9n6hv-_nuh4SCz0rekkINiUYfezVhTpbQ4WmnDJ6k8S0P4_rBj9JvKe_pnCP5ZmkfmkJCUmoce3w_ftqg5e89yAK3E4XTrIkwiyrZQlV0A94m6nceXOW29qcgsyIqHENy-3RgOhlhEQdPDpUXqAHI4SvGRkT03y_UQx96Q6ZoH43Zj5NPilD-LeKth9pTXVP9AqwXO6JrWGSfDfFZDF1X10MyiGXE33jIiS1NqnagbDyZPYb7Q_XR7z3Ml4xTXrxTXv-2A7CSfVXzKetV-9-r1emeAfcu8Vf9P7F0Upp4ZpeeQXTVgJMeeFmFBuxyzaFvdMGH1pxDG9-x_zW4XdT3Fv1qB2zBp65JxJDVN8q2pvxHWdmIv9JSJyX-LnBhuJVlvnV-p-NXqdVwQksp-qqFjHK5xxvb6gGIGm81td095StMCNPHsIYOwugBsuYQ51jv9uTfyoib6Tv4hhZHn9OsRRuRo-LOZHy_k9wLooEE1dNyU0vibBT55SNNt9bKE8b0JYw2hKCZuRNrtlRIqECUxeazx3ojI4hzDBH8wv9DTzz-N8eko0mQYMCIfjxe2KzAnQKLt7GkVqx_LsTJ6mNwozODL-7FKDp3oebi-p__hhVasNu5k=","trip_duration":5,"id":1417}},{"id":"494","type":"flight","attributes":{"origin_city":"Denver","destination_city":"Washington,
+        D.C.","origin_iata":"DEN","destination_iata":"BWI","latitude":39.1752778,"longitude":-76.668333,"price":111,"departure_datetime":"2021-01-30T18:00:00.000+00:00","arrival_datetime":"2021-01-30T23:16:00.000+00:00","r_departure_datetime":"2021-02-04T08:15:00.000+00:00","r_arrival_datetime":"2021-02-04T10:25:00.000+00:00","booking_link":"https://www.kiwi.com/deep?from=DEN\u0026to=BWI\u0026flightsId=07130a0b48e10000b0d91d37_0%7C0a0b071348e60000bcbb2755_0\u0026price=91\u0026passengers=1\u0026affilid=picky\u0026lang=en\u0026currency=USD\u0026booking_token=BXqbxEeYOS9END--jbIIU5UofSu9-7CXQSMlU0dUglmKQwQdJrAKN5pFu7beAv8veGMBxpV6LsMCTETrwO8GEmZ2cLq7dDiBuFKUTE47HysTDn7NVsuonZKqgyUxhSJnvic8CgqFbfHrMtopbFuzZd4RgmugxUvZturKMjH8seSrIq2ENCL8P9DG6St0UGdKaxXnSFYoXpZxVQDBuZB6VDqo57sBQG_iuiNbmb3gQD6C-W9fkiuN7h8Ftf3J4_ogxjSl6x7Y8C--XPQMjgKDESuiMPfzv7aMa7XwRNgL1kFc6HvcDRWjkXdznVPxrEwDtAEHnInhJOPCsajw_KLwuliiOm_PDrUmhXEyWgESvloNN2Icntv2Ib5AJ2xV2yEum1KW18Qkmxg4RFLPstToarqRkLrP1egCrhK2eCgwQmMNTOdEfuoVK5rHuFKqJ9uJBEi3LXY7WEPknDS8akiy7wbYa_FjlZkQu0vQrZfb8uug4t9cmd5rMbOOUxKs7_rIurQi852uwShXXh14giYGNGP2BPvppEmAsoeUvfw68vBzDHos5n7ZZOaZWe5IBmWm50ARW1z1559Dfx0eetusy86HS3Choeg7-wYSV6ZmJ-3QGJwFDuvmVXuG65oIPRqOGTR8Vx7WoP2p-dBWtVb5Xy58J3_8wzoHA251q6DaKz6M=","trip_duration":5,"id":494}},{"id":"2579","type":"flight","attributes":{"origin_city":"Denver","destination_city":"Chicago","origin_iata":"DEN","destination_iata":"MDW","latitude":41.7861111,"longitude":-87.7525,"price":125,"departure_datetime":"2021-01-30T09:50:00.000+00:00","arrival_datetime":"2021-01-30T13:15:00.000+00:00","r_departure_datetime":"2021-02-04T20:10:00.000+00:00","r_arrival_datetime":"2021-02-04T21:50:00.000+00:00","booking_link":"https://www.kiwi.com/deep?from=DEN\u0026to=MDW\u0026flightsId=07131b3148e10000e35de293_0%7C1b31071348e6000045912de2_0\u0026price=102\u0026passengers=1\u0026affilid=picky\u0026lang=en\u0026currency=USD\u0026booking_token=BWYpHmWI_a9Ei_bFxgXXfcIjxasqAbqsMX3R8XIbyh_hEujNK6Ggqcj1abhwSyO1F5MbnspW32ezskTztqQHUMxc9-Z_zf49L7Jh8t3j4YhPLPdphAbdCowCV-cK8RgQZhnjM8uj5Dgqm8BokjNiWvWDSzMqZIellHkz4FPTz924BXPp-_ELKT0wgGtGQW9xyDsFvLBVMg-FnVjlK-vztLULkhsk4_oqTNlb8zCePVChWeiozGA4RUnbht2-J6O9IJZ5aHxAGFFExjRvfhQxoQBcS3-iZGNS6nsCPI6v-_xwOtCxg8CPuudGkGwQQ3CTWRfALf7lBPBtIaFOfXTr0COBOqb56Ftcwl77cd7UmO4aMxU9SiccmunDiAHZAQa0nSAInrHcS4EENKBHdHwDijn67hN1AdAAO-enf3Q-eAVO2bl1RYnGF-6_Ht7aGWUSJ40iSFT-H_EhOQ69x28DqMIv-AZiqrjCMVYNhw9MaxQQfyVDnQKX8nX_WY1IMAjlB1TGUB4-5Pf4rTwxqlbVs5D_r8Sz-35KemRtCCCmMuRR3l4of4kI6jiZvjY15GT1fZQJ6251Bn2WMMLvUhfdHGJtCofKj4yaKSZmTi-2gy2EZKkFSLJggsPud80jzrbpcVFvfJHq8LXlNYePciMPKCwDsf9hiVdEbA8dhvut-bRE=","trip_duration":5,"id":2579}}]}'
+  recorded_at: Sun, 10 Jan 2021 21:09:49 GMT
+- request:
+    method: get
+    uri: http://localhost:3002/api/v1/weather?lat=36.08&lon=-115.15222
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '2405'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"type":"weather","id":null,"attributes":{"min_f":33.26000000000005,"max_f":43.420000000000016,"min_c":1.2600000000000477,"max_c":11.420000000000016,"day_feels_like_c":6.090000000000032,"day_feels_like_f":38.09000000000003,"description":"few
+        clouds","date":"2021-01-10T19:00:00+00:00","sky_coverage":23}},{"type":"weather","id":null,"attributes":{"min_f":33.650000000000034,"max_f":46.210000000000036,"min_c":1.650000000000034,"max_c":14.210000000000036,"day_feels_like_c":7.3799999999999955,"day_feels_like_f":39.379999999999995,"description":"clear
+        sky","date":"2021-01-11T19:00:00+00:00","sky_coverage":0}},{"type":"weather","id":null,"attributes":{"min_f":33.84000000000003,"max_f":46.33000000000004,"min_c":1.8400000000000318,"max_c":14.330000000000041,"day_feels_like_c":9.180000000000007,"day_feels_like_f":41.18000000000001,"description":"few
+        clouds","date":"2021-01-12T19:00:00+00:00","sky_coverage":12}},{"type":"weather","id":null,"attributes":{"min_f":36.19,"max_f":49.23000000000002,"min_c":4.189999999999998,"max_c":17.230000000000018,"day_feels_like_c":11.32000000000005,"day_feels_like_f":43.32000000000005,"description":"scattered
+        clouds","date":"2021-01-13T19:00:00+00:00","sky_coverage":36}},{"type":"weather","id":null,"attributes":{"min_f":39.0,"max_f":53.07000000000005,"min_c":7.0,"max_c":21.07000000000005,"day_feels_like_c":14.860000000000014,"day_feels_like_f":46.860000000000014,"description":"clear
+        sky","date":"2021-01-14T19:00:00+00:00","sky_coverage":1}},{"type":"weather","id":null,"attributes":{"min_f":40.08000000000004,"max_f":53.08000000000004,"min_c":8.080000000000041,"max_c":21.08000000000004,"day_feels_like_c":15.060000000000002,"day_feels_like_f":47.06,"description":"broken
+        clouds","date":"2021-01-15T19:00:00+00:00","sky_coverage":67}},{"type":"weather","id":null,"attributes":{"min_f":39.379999999999995,"max_f":53.72000000000003,"min_c":7.3799999999999955,"max_c":21.720000000000027,"day_feels_like_c":13.860000000000014,"day_feels_like_f":45.860000000000014,"description":"few
+        clouds","date":"2021-01-16T19:00:00+00:00","sky_coverage":13}},{"type":"weather","id":null,"attributes":{"min_f":34.99000000000001,"max_f":45.03000000000003,"min_c":2.990000000000009,"max_c":13.03000000000003,"day_feels_like_c":5.100000000000023,"day_feels_like_f":37.10000000000002,"description":"scattered
+        clouds","date":"2021-01-17T19:00:00+00:00","sky_coverage":38}}]}'
+  recorded_at: Sun, 10 Jan 2021 21:09:51 GMT
+- request:
+    method: get
+    uri: http://localhost:3002/api/v1/weather?lat=29.9844444&lon=-95.341389
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '2419'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"type":"weather","id":null,"attributes":{"min_f":34.460000000000036,"max_f":40.460000000000036,"min_c":2.4600000000000364,"max_c":8.460000000000036,"day_feels_like_c":-0.839999999999975,"day_feels_like_f":31.160000000000025,"description":"moderate
+        rain","date":"2021-01-10T18:00:00+00:00","sky_coverage":98}},{"type":"weather","id":null,"attributes":{"min_f":35.29000000000002,"max_f":37.80000000000001,"min_c":3.2900000000000205,"max_c":5.800000000000011,"day_feels_like_c":0.28000000000002956,"day_feels_like_f":32.28000000000003,"description":"light
+        rain","date":"2021-01-11T18:00:00+00:00","sky_coverage":99}},{"type":"weather","id":null,"attributes":{"min_f":35.29000000000002,"max_f":43.47000000000003,"min_c":3.2900000000000205,"max_c":11.470000000000027,"day_feels_like_c":5.830000000000041,"day_feels_like_f":37.83000000000004,"description":"clear
+        sky","date":"2021-01-12T18:00:00+00:00","sky_coverage":0}},{"type":"weather","id":null,"attributes":{"min_f":38.28000000000003,"max_f":47.32000000000005,"min_c":6.28000000000003,"max_c":15.32000000000005,"day_feels_like_c":9.140000000000043,"day_feels_like_f":41.14000000000004,"description":"clear
+        sky","date":"2021-01-13T18:00:00+00:00","sky_coverage":0}},{"type":"weather","id":null,"attributes":{"min_f":40.56,"max_f":50.94,"min_c":8.560000000000002,"max_c":18.939999999999998,"day_feels_like_c":11.629999999999995,"day_feels_like_f":43.629999999999995,"description":"clear
+        sky","date":"2021-01-14T18:00:00+00:00","sky_coverage":0}},{"type":"weather","id":null,"attributes":{"min_f":44.73000000000002,"max_f":50.34000000000003,"min_c":12.730000000000018,"max_c":18.340000000000032,"day_feels_like_c":12.480000000000018,"day_feels_like_f":44.48000000000002,"description":"broken
+        clouds","date":"2021-01-15T18:00:00+00:00","sky_coverage":61}},{"type":"weather","id":null,"attributes":{"min_f":40.99000000000001,"max_f":47.60000000000002,"min_c":8.990000000000009,"max_c":15.600000000000023,"day_feels_like_c":9.510000000000048,"day_feels_like_f":41.51000000000005,"description":"clear
+        sky","date":"2021-01-16T18:00:00+00:00","sky_coverage":0}},{"type":"weather","id":null,"attributes":{"min_f":41.670000000000016,"max_f":45.80000000000001,"min_c":9.670000000000016,"max_c":13.800000000000011,"day_feels_like_c":9.610000000000014,"day_feels_like_f":41.610000000000014,"description":"light
+        rain","date":"2021-01-17T18:00:00+00:00","sky_coverage":83}}]}'
+  recorded_at: Sun, 10 Jan 2021 21:09:52 GMT
+- request:
+    method: get
+    uri: http://localhost:3002/api/v1/weather?lat=33.4341667&lon=-112.01167
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '2392'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"type":"weather","id":null,"attributes":{"min_f":41.55000000000001,"max_f":50.129999999999995,"min_c":9.550000000000011,"max_c":18.129999999999995,"day_feels_like_c":11.200000000000045,"day_feels_like_f":43.200000000000045,"description":"clear
+        sky","date":"2021-01-10T19:00:00+00:00","sky_coverage":0}},{"type":"weather","id":null,"attributes":{"min_f":42.34000000000003,"max_f":50.26000000000005,"min_c":10.340000000000032,"max_c":18.260000000000048,"day_feels_like_c":11.770000000000039,"day_feels_like_f":43.77000000000004,"description":"clear
+        sky","date":"2021-01-11T19:00:00+00:00","sky_coverage":0}},{"type":"weather","id":null,"attributes":{"min_f":40.84000000000003,"max_f":49.19,"min_c":8.840000000000032,"max_c":17.189999999999998,"day_feels_like_c":10.990000000000009,"day_feels_like_f":42.99000000000001,"description":"clear
+        sky","date":"2021-01-12T19:00:00+00:00","sky_coverage":0}},{"type":"weather","id":null,"attributes":{"min_f":42.19,"max_f":50.32000000000005,"min_c":10.189999999999998,"max_c":18.32000000000005,"day_feels_like_c":11.700000000000045,"day_feels_like_f":43.700000000000045,"description":"clear
+        sky","date":"2021-01-13T19:00:00+00:00","sky_coverage":0}},{"type":"weather","id":null,"attributes":{"min_f":44.44,"max_f":52.84000000000003,"min_c":12.439999999999998,"max_c":20.840000000000032,"day_feels_like_c":14.620000000000005,"day_feels_like_f":46.620000000000005,"description":"clear
+        sky","date":"2021-01-14T19:00:00+00:00","sky_coverage":0}},{"type":"weather","id":null,"attributes":{"min_f":45.72000000000003,"max_f":54.52000000000004,"min_c":13.720000000000027,"max_c":22.52000000000004,"day_feels_like_c":16.08000000000004,"day_feels_like_f":48.08000000000004,"description":"clear
+        sky","date":"2021-01-15T19:00:00+00:00","sky_coverage":0}},{"type":"weather","id":null,"attributes":{"min_f":47.160000000000025,"max_f":54.68000000000001,"min_c":15.160000000000025,"max_c":22.680000000000007,"day_feels_like_c":16.939999999999998,"day_feels_like_f":48.94,"description":"broken
+        clouds","date":"2021-01-16T19:00:00+00:00","sky_coverage":75}},{"type":"weather","id":null,"attributes":{"min_f":43.24000000000001,"max_f":50.22000000000003,"min_c":11.240000000000009,"max_c":18.220000000000027,"day_feels_like_c":6.4500000000000455,"day_feels_like_f":38.450000000000045,"description":"clear
+        sky","date":"2021-01-17T19:00:00+00:00","sky_coverage":1}}]}'
+  recorded_at: Sun, 10 Jan 2021 21:09:53 GMT
+- request:
+    method: get
+    uri: http://localhost:3002/api/v1/weather?lat=25.7933333&lon=-80.290556
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '2347'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"type":"weather","id":null,"attributes":{"min_f":43.84000000000003,"max_f":52.14000000000004,"min_c":11.840000000000032,"max_c":20.140000000000043,"day_feels_like_c":14.82000000000005,"day_feels_like_f":46.82000000000005,"description":"clear
+        sky","date":"2021-01-10T17:00:00+00:00","sky_coverage":1}},{"type":"weather","id":null,"attributes":{"min_f":50.98000000000002,"max_f":55.19,"min_c":18.980000000000018,"max_c":23.189999999999998,"day_feels_like_c":20.700000000000045,"day_feels_like_f":52.700000000000045,"description":"broken
+        clouds","date":"2021-01-11T17:00:00+00:00","sky_coverage":81}},{"type":"weather","id":null,"attributes":{"min_f":53.0,"max_f":57.08000000000004,"min_c":21.0,"max_c":25.08000000000004,"day_feels_like_c":24.870000000000005,"day_feels_like_f":56.870000000000005,"description":"overcast
+        clouds","date":"2021-01-12T17:00:00+00:00","sky_coverage":100}},{"type":"weather","id":null,"attributes":{"min_f":52.910000000000025,"max_f":56.900000000000034,"min_c":20.910000000000025,"max_c":24.900000000000034,"day_feels_like_c":24.80000000000001,"day_feels_like_f":56.80000000000001,"description":"light
+        rain","date":"2021-01-13T17:00:00+00:00","sky_coverage":87}},{"type":"weather","id":null,"attributes":{"min_f":49.18000000000001,"max_f":54.370000000000005,"min_c":17.180000000000007,"max_c":22.370000000000005,"day_feels_like_c":17.78000000000003,"day_feels_like_f":49.78000000000003,"description":"light
+        rain","date":"2021-01-14T17:00:00+00:00","sky_coverage":54}},{"type":"weather","id":null,"attributes":{"min_f":47.47000000000003,"max_f":54.74000000000001,"min_c":15.470000000000027,"max_c":22.74000000000001,"day_feels_like_c":18.25,"day_feels_like_f":50.25,"description":"scattered
+        clouds","date":"2021-01-15T17:00:00+00:00","sky_coverage":34}},{"type":"weather","id":null,"attributes":{"min_f":48.25,"max_f":55.0,"min_c":16.25,"max_c":23.0,"day_feels_like_c":21.680000000000007,"day_feels_like_f":53.68000000000001,"description":"clear
+        sky","date":"2021-01-16T17:00:00+00:00","sky_coverage":0}},{"type":"weather","id":null,"attributes":{"min_f":49.85000000000002,"max_f":54.129999999999995,"min_c":17.850000000000023,"max_c":22.129999999999995,"day_feels_like_c":20.410000000000025,"day_feels_like_f":52.410000000000025,"description":"light
+        rain","date":"2021-01-17T17:00:00+00:00","sky_coverage":94}}]}'
+  recorded_at: Sun, 10 Jan 2021 21:09:55 GMT
+- request:
+    method: get
+    uri: http://localhost:3002/api/v1/weather?lat=32.8969444&lon=-97.038056
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '2419'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"type":"weather","id":null,"attributes":{"min_f":33.710000000000036,"max_f":37.24000000000001,"min_c":1.7100000000000364,"max_c":5.240000000000009,"day_feels_like_c":-1.2699999999999818,"day_feels_like_f":30.730000000000018,"description":"rain
+        and snow","date":"2021-01-10T18:00:00+00:00","sky_coverage":100}},{"type":"weather","id":null,"attributes":{"min_f":34.200000000000045,"max_f":39.99000000000001,"min_c":2.2000000000000455,"max_c":7.990000000000009,"day_feels_like_c":2.7600000000000477,"day_feels_like_f":34.76000000000005,"description":"light
+        snow","date":"2021-01-11T18:00:00+00:00","sky_coverage":20}},{"type":"weather","id":null,"attributes":{"min_f":34.83000000000004,"max_f":42.43000000000001,"min_c":2.830000000000041,"max_c":10.430000000000007,"day_feels_like_c":4.1299999999999955,"day_feels_like_f":36.129999999999995,"description":"few
+        clouds","date":"2021-01-12T18:00:00+00:00","sky_coverage":19}},{"type":"weather","id":null,"attributes":{"min_f":36.93000000000001,"max_f":46.629999999999995,"min_c":4.930000000000007,"max_c":14.629999999999995,"day_feels_like_c":6.840000000000032,"day_feels_like_f":38.84000000000003,"description":"clear
+        sky","date":"2021-01-13T18:00:00+00:00","sky_coverage":0}},{"type":"weather","id":null,"attributes":{"min_f":39.5,"max_f":50.27000000000004,"min_c":7.5,"max_c":18.27000000000004,"day_feels_like_c":9.910000000000025,"day_feels_like_f":41.910000000000025,"description":"clear
+        sky","date":"2021-01-14T18:00:00+00:00","sky_coverage":0}},{"type":"weather","id":null,"attributes":{"min_f":41.02000000000004,"max_f":45.48000000000002,"min_c":9.020000000000039,"max_c":13.480000000000018,"day_feels_like_c":6.140000000000043,"day_feels_like_f":38.14000000000004,"description":"clear
+        sky","date":"2021-01-15T18:00:00+00:00","sky_coverage":0}},{"type":"weather","id":null,"attributes":{"min_f":39.620000000000005,"max_f":46.34000000000003,"min_c":7.6200000000000045,"max_c":14.340000000000032,"day_feels_like_c":6.770000000000039,"day_feels_like_f":38.77000000000004,"description":"clear
+        sky","date":"2021-01-16T18:00:00+00:00","sky_coverage":0}},{"type":"weather","id":null,"attributes":{"min_f":34.420000000000016,"max_f":42.79000000000002,"min_c":2.420000000000016,"max_c":10.79000000000002,"day_feels_like_c":0.6000000000000227,"day_feels_like_f":32.60000000000002,"description":"rain
+        and snow","date":"2021-01-17T18:00:00+00:00","sky_coverage":100}}]}'
+  recorded_at: Sun, 10 Jan 2021 21:09:56 GMT
+- request:
+    method: get
+    uri: http://localhost:3002/api/v1/weather?lat=40.7883333&lon=-111.97778
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '2464'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"type":"weather","id":null,"attributes":{"min_f":30.430000000000007,"max_f":33.379999999999995,"min_c":-1.5699999999999932,"max_c":1.3799999999999955,"day_feels_like_c":-2.6399999999999864,"day_feels_like_f":29.360000000000014,"description":"scattered
+        clouds","date":"2021-01-10T19:00:00+00:00","sky_coverage":28}},{"type":"weather","id":null,"attributes":{"min_f":29.810000000000002,"max_f":33.710000000000036,"min_c":-2.1899999999999977,"max_c":1.7100000000000364,"day_feels_like_c":-1.9799999999999613,"day_feels_like_f":30.02000000000004,"description":"clear
+        sky","date":"2021-01-11T19:00:00+00:00","sky_coverage":0}},{"type":"weather","id":null,"attributes":{"min_f":31.910000000000025,"max_f":36.910000000000025,"min_c":-0.08999999999997499,"max_c":4.910000000000025,"day_feels_like_c":0.5300000000000296,"day_feels_like_f":32.53000000000003,"description":"overcast
+        clouds","date":"2021-01-12T19:00:00+00:00","sky_coverage":100}},{"type":"weather","id":null,"attributes":{"min_f":34.81,"max_f":40.610000000000014,"min_c":2.8100000000000023,"max_c":8.610000000000014,"day_feels_like_c":2.3600000000000136,"day_feels_like_f":34.360000000000014,"description":"overcast
+        clouds","date":"2021-01-13T19:00:00+00:00","sky_coverage":100}},{"type":"weather","id":null,"attributes":{"min_f":37.160000000000025,"max_f":39.360000000000014,"min_c":5.160000000000025,"max_c":7.360000000000014,"day_feels_like_c":2.1299999999999955,"day_feels_like_f":34.129999999999995,"description":"light
+        rain","date":"2021-01-14T19:00:00+00:00","sky_coverage":96}},{"type":"weather","id":null,"attributes":{"min_f":36.35000000000002,"max_f":42.02000000000004,"min_c":4.350000000000023,"max_c":10.020000000000039,"day_feels_like_c":4.260000000000048,"day_feels_like_f":36.26000000000005,"description":"overcast
+        clouds","date":"2021-01-15T19:00:00+00:00","sky_coverage":86}},{"type":"weather","id":null,"attributes":{"min_f":31.590000000000032,"max_f":36.56,"min_c":-0.40999999999996817,"max_c":4.560000000000002,"day_feels_like_c":-3.349999999999966,"day_feels_like_f":28.650000000000034,"description":"light
+        snow","date":"2021-01-16T19:00:00+00:00","sky_coverage":65}},{"type":"weather","id":null,"attributes":{"min_f":30.350000000000023,"max_f":34.07000000000005,"min_c":-1.6499999999999773,"max_c":2.07000000000005,"day_feels_like_c":-2.7899999999999636,"day_feels_like_f":29.210000000000036,"description":"few
+        clouds","date":"2021-01-17T19:00:00+00:00","sky_coverage":19}}]}'
+  recorded_at: Sun, 10 Jan 2021 21:09:57 GMT
+- request:
+    method: get
+    uri: http://localhost:3002/api/v1/weather?lat=33.6366667&lon=-84.428056
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '2423'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"type":"weather","id":null,"attributes":{"min_f":30.930000000000007,"max_f":41.110000000000014,"min_c":-1.0699999999999932,"max_c":9.110000000000014,"day_feels_like_c":3.150000000000034,"day_feels_like_f":35.150000000000034,"description":"broken
+        clouds","date":"2021-01-10T17:00:00+00:00","sky_coverage":69}},{"type":"weather","id":null,"attributes":{"min_f":34.99000000000001,"max_f":40.370000000000005,"min_c":2.990000000000009,"max_c":8.370000000000005,"day_feels_like_c":5.2900000000000205,"day_feels_like_f":37.29000000000002,"description":"light
+        rain","date":"2021-01-11T17:00:00+00:00","sky_coverage":97}},{"type":"weather","id":null,"attributes":{"min_f":33.98000000000002,"max_f":43.19,"min_c":1.9800000000000182,"max_c":11.189999999999998,"day_feels_like_c":5.57000000000005,"day_feels_like_f":37.57000000000005,"description":"clear
+        sky","date":"2021-01-12T17:00:00+00:00","sky_coverage":2}},{"type":"weather","id":null,"attributes":{"min_f":34.870000000000005,"max_f":41.110000000000014,"min_c":2.8700000000000045,"max_c":9.110000000000014,"day_feels_like_c":5.020000000000039,"day_feels_like_f":37.02000000000004,"description":"overcast
+        clouds","date":"2021-01-13T17:00:00+00:00","sky_coverage":91}},{"type":"weather","id":null,"attributes":{"min_f":34.81,"max_f":45.39000000000004,"min_c":2.8100000000000023,"max_c":13.390000000000043,"day_feels_like_c":6.970000000000027,"day_feels_like_f":38.97000000000003,"description":"clear
+        sky","date":"2021-01-14T17:00:00+00:00","sky_coverage":2}},{"type":"weather","id":null,"attributes":{"min_f":37.35000000000002,"max_f":44.860000000000014,"min_c":5.350000000000023,"max_c":12.860000000000014,"day_feels_like_c":6.730000000000018,"day_feels_like_f":38.73000000000002,"description":"scattered
+        clouds","date":"2021-01-15T17:00:00+00:00","sky_coverage":44}},{"type":"weather","id":null,"attributes":{"min_f":33.150000000000034,"max_f":40.26000000000005,"min_c":1.150000000000034,"max_c":8.260000000000048,"day_feels_like_c":1.170000000000016,"day_feels_like_f":33.170000000000016,"description":"clear
+        sky","date":"2021-01-16T17:00:00+00:00","sky_coverage":0}},{"type":"weather","id":null,"attributes":{"min_f":34.870000000000005,"max_f":41.44,"min_c":2.8700000000000045,"max_c":9.439999999999998,"day_feels_like_c":5.300000000000011,"day_feels_like_f":37.30000000000001,"description":"overcast
+        clouds","date":"2021-01-17T17:00:00+00:00","sky_coverage":100}}]}'
+  recorded_at: Sun, 10 Jan 2021 21:09:59 GMT
+- request:
+    method: get
+    uri: http://localhost:3002/api/v1/weather?lat=33.9425&lon=-118.40806
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '2444'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"type":"weather","id":null,"attributes":{"min_f":46.870000000000005,"max_f":52.28000000000003,"min_c":14.870000000000005,"max_c":20.28000000000003,"day_feels_like_c":16.900000000000034,"day_feels_like_f":48.900000000000034,"description":"scattered
+        clouds","date":"2021-01-10T20:00:00+00:00","sky_coverage":30}},{"type":"weather","id":null,"attributes":{"min_f":46.39000000000004,"max_f":52.14000000000004,"min_c":14.390000000000043,"max_c":20.140000000000043,"day_feels_like_c":16.640000000000043,"day_feels_like_f":48.64000000000004,"description":"clear
+        sky","date":"2021-01-11T20:00:00+00:00","sky_coverage":6}},{"type":"weather","id":null,"attributes":{"min_f":47.01000000000005,"max_f":51.72000000000003,"min_c":15.010000000000048,"max_c":19.720000000000027,"day_feels_like_c":16.840000000000032,"day_feels_like_f":48.84000000000003,"description":"clear
+        sky","date":"2021-01-12T20:00:00+00:00","sky_coverage":0}},{"type":"weather","id":null,"attributes":{"min_f":47.49000000000001,"max_f":53.79000000000002,"min_c":15.490000000000009,"max_c":21.79000000000002,"day_feels_like_c":18.24000000000001,"day_feels_like_f":50.24000000000001,"description":"clear
+        sky","date":"2021-01-13T20:00:00+00:00","sky_coverage":2}},{"type":"weather","id":null,"attributes":{"min_f":48.960000000000036,"max_f":55.129999999999995,"min_c":16.960000000000036,"max_c":23.129999999999995,"day_feels_like_c":20.420000000000016,"day_feels_like_f":52.420000000000016,"description":"clear
+        sky","date":"2021-01-14T20:00:00+00:00","sky_coverage":0}},{"type":"weather","id":null,"attributes":{"min_f":50.410000000000025,"max_f":56.07000000000005,"min_c":18.410000000000025,"max_c":24.07000000000005,"day_feels_like_c":21.05000000000001,"day_feels_like_f":53.05000000000001,"description":"clear
+        sky","date":"2021-01-15T20:00:00+00:00","sky_coverage":0}},{"type":"weather","id":null,"attributes":{"min_f":49.400000000000034,"max_f":55.68000000000001,"min_c":17.400000000000034,"max_c":23.680000000000007,"day_feels_like_c":21.220000000000027,"day_feels_like_f":53.22000000000003,"description":"clear
+        sky","date":"2021-01-16T20:00:00+00:00","sky_coverage":0}},{"type":"weather","id":null,"attributes":{"min_f":49.80000000000001,"max_f":55.26000000000005,"min_c":17.80000000000001,"max_c":23.260000000000048,"day_feels_like_c":20.210000000000036,"day_feels_like_f":52.210000000000036,"description":"clear
+        sky","date":"2021-01-17T20:00:00+00:00","sky_coverage":0}}]}'
+  recorded_at: Sun, 10 Jan 2021 21:10:00 GMT
+- request:
+    method: get
+    uri: http://localhost:3002/api/v1/weather?lat=26.5361111&lon=-81.755278
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '2437'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"type":"weather","id":null,"attributes":{"min_f":38.83000000000004,"max_f":49.22000000000003,"min_c":6.830000000000041,"max_c":17.220000000000027,"day_feels_like_c":10.689999999999998,"day_feels_like_f":42.69,"description":"clear
+        sky","date":"2021-01-10T17:00:00+00:00","sky_coverage":0}},{"type":"weather","id":null,"attributes":{"min_f":44.24000000000001,"max_f":55.43000000000001,"min_c":12.240000000000009,"max_c":23.430000000000007,"day_feels_like_c":20.010000000000048,"day_feels_like_f":52.01000000000005,"description":"broken
+        clouds","date":"2021-01-11T17:00:00+00:00","sky_coverage":51}},{"type":"weather","id":null,"attributes":{"min_f":48.910000000000025,"max_f":57.51000000000005,"min_c":16.910000000000025,"max_c":25.510000000000048,"day_feels_like_c":24.610000000000014,"day_feels_like_f":56.610000000000014,"description":"overcast
+        clouds","date":"2021-01-12T17:00:00+00:00","sky_coverage":100}},{"type":"weather","id":null,"attributes":{"min_f":49.32000000000005,"max_f":57.460000000000036,"min_c":17.32000000000005,"max_c":25.460000000000036,"day_feels_like_c":25.660000000000025,"day_feels_like_f":57.660000000000025,"description":"broken
+        clouds","date":"2021-01-13T17:00:00+00:00","sky_coverage":74}},{"type":"weather","id":null,"attributes":{"min_f":44.43000000000001,"max_f":52.07000000000005,"min_c":12.430000000000007,"max_c":20.07000000000005,"day_feels_like_c":16.78000000000003,"day_feels_like_f":48.78000000000003,"description":"broken
+        clouds","date":"2021-01-14T17:00:00+00:00","sky_coverage":63}},{"type":"weather","id":null,"attributes":{"min_f":43.31,"max_f":52.620000000000005,"min_c":11.310000000000002,"max_c":20.620000000000005,"day_feels_like_c":16.950000000000045,"day_feels_like_f":48.950000000000045,"description":"few
+        clouds","date":"2021-01-15T17:00:00+00:00","sky_coverage":22}},{"type":"weather","id":null,"attributes":{"min_f":44.79000000000002,"max_f":51.18000000000001,"min_c":12.79000000000002,"max_c":19.180000000000007,"day_feels_like_c":16.210000000000036,"day_feels_like_f":48.210000000000036,"description":"broken
+        clouds","date":"2021-01-16T17:00:00+00:00","sky_coverage":67}},{"type":"weather","id":null,"attributes":{"min_f":41.19,"max_f":54.26000000000005,"min_c":9.189999999999998,"max_c":22.260000000000048,"day_feels_like_c":18.230000000000018,"day_feels_like_f":50.23000000000002,"description":"overcast
+        clouds","date":"2021-01-17T17:00:00+00:00","sky_coverage":100}}]}'
+  recorded_at: Sun, 10 Jan 2021 21:10:02 GMT
+- request:
+    method: get
+    uri: http://localhost:3002/api/v1/weather?lat=39.8719444&lon=-75.241111
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '2436'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"type":"weather","id":null,"attributes":{"min_f":31.83000000000004,"max_f":38.82000000000005,"min_c":-0.16999999999995907,"max_c":6.82000000000005,"day_feels_like_c":-0.13999999999998636,"day_feels_like_f":31.860000000000014,"description":"scattered
+        clouds","date":"2021-01-10T17:00:00+00:00","sky_coverage":30}},{"type":"weather","id":null,"attributes":{"min_f":31.810000000000002,"max_f":37.22000000000003,"min_c":-0.18999999999999773,"max_c":5.220000000000027,"day_feels_like_c":0.6000000000000227,"day_feels_like_f":32.60000000000002,"description":"overcast
+        clouds","date":"2021-01-11T17:00:00+00:00","sky_coverage":100}},{"type":"weather","id":null,"attributes":{"min_f":32.210000000000036,"max_f":38.85000000000002,"min_c":0.21000000000003638,"max_c":6.850000000000023,"day_feels_like_c":0.8100000000000023,"day_feels_like_f":32.81,"description":"clear
+        sky","date":"2021-01-12T17:00:00+00:00","sky_coverage":7}},{"type":"weather","id":null,"attributes":{"min_f":32.74000000000001,"max_f":40.27000000000004,"min_c":0.7400000000000091,"max_c":8.270000000000039,"day_feels_like_c":2.660000000000025,"day_feels_like_f":34.660000000000025,"description":"clear
+        sky","date":"2021-01-13T17:00:00+00:00","sky_coverage":0}},{"type":"weather","id":null,"attributes":{"min_f":35.210000000000036,"max_f":40.29000000000002,"min_c":3.2100000000000364,"max_c":8.29000000000002,"day_feels_like_c":3.400000000000034,"day_feels_like_f":35.400000000000034,"description":"scattered
+        clouds","date":"2021-01-14T17:00:00+00:00","sky_coverage":41}},{"type":"weather","id":null,"attributes":{"min_f":35.18000000000001,"max_f":39.35000000000002,"min_c":3.180000000000007,"max_c":7.350000000000023,"day_feels_like_c":1.2900000000000205,"day_feels_like_f":33.29000000000002,"description":"light
+        rain","date":"2021-01-15T17:00:00+00:00","sky_coverage":100}},{"type":"weather","id":null,"attributes":{"min_f":32.19,"max_f":35.73000000000002,"min_c":0.18999999999999773,"max_c":3.730000000000018,"day_feels_like_c":-3.659999999999968,"day_feels_like_f":28.340000000000032,"description":"broken
+        clouds","date":"2021-01-16T17:00:00+00:00","sky_coverage":68}},{"type":"weather","id":null,"attributes":{"min_f":31.189999999999998,"max_f":33.69,"min_c":-0.8100000000000023,"max_c":1.6899999999999977,"day_feels_like_c":-5.399999999999977,"day_feels_like_f":26.600000000000023,"description":"clear
+        sky","date":"2021-01-17T17:00:00+00:00","sky_coverage":1}}]}'
+  recorded_at: Sun, 10 Jan 2021 21:10:07 GMT
+- request:
+    method: get
+    uri: http://localhost:3002/api/v1/weather?lat=30.1944444&lon=-97.67
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '2423'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"type":"weather","id":null,"attributes":{"min_f":32.75,"max_f":40.379999999999995,"min_c":0.75,"max_c":8.379999999999995,"day_feels_like_c":-2.4499999999999886,"day_feels_like_f":29.55000000000001,"description":"rain
+        and snow","date":"2021-01-10T18:00:00+00:00","sky_coverage":100}},{"type":"weather","id":null,"attributes":{"min_f":34.160000000000025,"max_f":37.35000000000002,"min_c":2.160000000000025,"max_c":5.350000000000023,"day_feels_like_c":-0.7899999999999636,"day_feels_like_f":31.210000000000036,"description":"overcast
+        clouds","date":"2021-01-11T18:00:00+00:00","sky_coverage":92}},{"type":"weather","id":null,"attributes":{"min_f":34.10000000000002,"max_f":42.78000000000003,"min_c":2.1000000000000227,"max_c":10.78000000000003,"day_feels_like_c":6.170000000000016,"day_feels_like_f":38.170000000000016,"description":"clear
+        sky","date":"2021-01-12T18:00:00+00:00","sky_coverage":0}},{"type":"weather","id":null,"attributes":{"min_f":36.48000000000002,"max_f":48.85000000000002,"min_c":4.480000000000018,"max_c":16.850000000000023,"day_feels_like_c":9.04000000000002,"day_feels_like_f":41.04000000000002,"description":"clear
+        sky","date":"2021-01-13T18:00:00+00:00","sky_coverage":0}},{"type":"weather","id":null,"attributes":{"min_f":39.400000000000034,"max_f":51.660000000000025,"min_c":7.400000000000034,"max_c":19.660000000000025,"day_feels_like_c":12.550000000000011,"day_feels_like_f":44.55000000000001,"description":"clear
+        sky","date":"2021-01-14T18:00:00+00:00","sky_coverage":0}},{"type":"weather","id":null,"attributes":{"min_f":41.80000000000001,"max_f":47.47000000000003,"min_c":9.800000000000011,"max_c":15.470000000000027,"day_feels_like_c":6.930000000000007,"day_feels_like_f":38.93000000000001,"description":"clear
+        sky","date":"2021-01-15T18:00:00+00:00","sky_coverage":1}},{"type":"weather","id":null,"attributes":{"min_f":38.710000000000036,"max_f":47.420000000000016,"min_c":6.710000000000036,"max_c":15.420000000000016,"day_feels_like_c":8.210000000000036,"day_feels_like_f":40.210000000000036,"description":"clear
+        sky","date":"2021-01-16T18:00:00+00:00","sky_coverage":0}},{"type":"weather","id":null,"attributes":{"min_f":38.170000000000016,"max_f":44.460000000000036,"min_c":6.170000000000016,"max_c":12.460000000000036,"day_feels_like_c":7.1299999999999955,"day_feels_like_f":39.129999999999995,"description":"light
+        rain","date":"2021-01-17T18:00:00+00:00","sky_coverage":99}}]}'
+  recorded_at: Sun, 10 Jan 2021 21:10:08 GMT
+- request:
+    method: get
+    uri: http://localhost:3002/api/v1/weather?lat=47.4488889&lon=-122.30944
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '2467'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"type":"weather","id":null,"attributes":{"min_f":36.84000000000003,"max_f":41.54000000000002,"min_c":4.840000000000032,"max_c":9.54000000000002,"day_feels_like_c":6.720000000000027,"day_feels_like_f":38.72000000000003,"description":"light
+        rain","date":"2021-01-10T20:00:00+00:00","sky_coverage":31}},{"type":"weather","id":null,"attributes":{"min_f":37.210000000000036,"max_f":41.49000000000001,"min_c":5.210000000000036,"max_c":9.490000000000009,"day_feels_like_c":5.390000000000043,"day_feels_like_f":37.39000000000004,"description":"heavy
+        intensity rain","date":"2021-01-11T20:00:00+00:00","sky_coverage":100}},{"type":"weather","id":null,"attributes":{"min_f":39.28000000000003,"max_f":43.210000000000036,"min_c":7.28000000000003,"max_c":11.210000000000036,"day_feels_like_c":7.710000000000036,"day_feels_like_f":39.710000000000036,"description":"moderate
+        rain","date":"2021-01-12T20:00:00+00:00","sky_coverage":100}},{"type":"weather","id":null,"attributes":{"min_f":36.32000000000005,"max_f":44.950000000000045,"min_c":4.32000000000005,"max_c":12.950000000000045,"day_feels_like_c":2.5100000000000477,"day_feels_like_f":34.51000000000005,"description":"heavy
+        intensity rain","date":"2021-01-13T20:00:00+00:00","sky_coverage":5}},{"type":"weather","id":null,"attributes":{"min_f":34.09000000000003,"max_f":38.450000000000045,"min_c":2.090000000000032,"max_c":6.4500000000000455,"day_feels_like_c":3.580000000000041,"day_feels_like_f":35.58000000000004,"description":"moderate
+        rain","date":"2021-01-14T20:00:00+00:00","sky_coverage":99}},{"type":"weather","id":null,"attributes":{"min_f":37.370000000000005,"max_f":41.150000000000034,"min_c":5.3700000000000045,"max_c":9.150000000000034,"day_feels_like_c":4.1200000000000045,"day_feels_like_f":36.120000000000005,"description":"light
+        rain","date":"2021-01-15T20:00:00+00:00","sky_coverage":63}},{"type":"weather","id":null,"attributes":{"min_f":35.650000000000034,"max_f":38.51000000000005,"min_c":3.650000000000034,"max_c":6.510000000000048,"day_feels_like_c":3.5300000000000296,"day_feels_like_f":35.53000000000003,"description":"light
+        rain","date":"2021-01-16T20:00:00+00:00","sky_coverage":100}},{"type":"weather","id":null,"attributes":{"min_f":36.28000000000003,"max_f":38.09000000000003,"min_c":4.28000000000003,"max_c":6.090000000000032,"day_feels_like_c":3.230000000000018,"day_feels_like_f":35.23000000000002,"description":"light
+        rain","date":"2021-01-17T20:00:00+00:00","sky_coverage":100}}]}'
+  recorded_at: Sun, 10 Jan 2021 21:10:10 GMT
+- request:
+    method: get
+    uri: http://localhost:3002/api/v1/weather?lat=35.2138889&lon=-80.943056
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '2372'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"type":"weather","id":null,"attributes":{"min_f":30.870000000000005,"max_f":41.73000000000002,"min_c":-1.1299999999999955,"max_c":9.730000000000018,"day_feels_like_c":5.810000000000002,"day_feels_like_f":37.81,"description":"clear
+        sky","date":"2021-01-10T17:00:00+00:00","sky_coverage":0}},{"type":"weather","id":null,"attributes":{"min_f":32.77000000000004,"max_f":39.56,"min_c":0.7700000000000387,"max_c":7.560000000000002,"day_feels_like_c":3.7200000000000273,"day_feels_like_f":35.72000000000003,"description":"overcast
+        clouds","date":"2021-01-11T17:00:00+00:00","sky_coverage":100}},{"type":"weather","id":null,"attributes":{"min_f":33.420000000000016,"max_f":43.44,"min_c":1.420000000000016,"max_c":11.439999999999998,"day_feels_like_c":8.390000000000043,"day_feels_like_f":40.39000000000004,"description":"clear
+        sky","date":"2021-01-12T17:00:00+00:00","sky_coverage":0}},{"type":"weather","id":null,"attributes":{"min_f":33.74000000000001,"max_f":42.75,"min_c":1.740000000000009,"max_c":10.75,"day_feels_like_c":7.7000000000000455,"day_feels_like_f":39.700000000000045,"description":"few
+        clouds","date":"2021-01-13T17:00:00+00:00","sky_coverage":18}},{"type":"weather","id":null,"attributes":{"min_f":32.129999999999995,"max_f":42.49000000000001,"min_c":0.12999999999999545,"max_c":10.490000000000009,"day_feels_like_c":5.980000000000018,"day_feels_like_f":37.98000000000002,"description":"clear
+        sky","date":"2021-01-14T17:00:00+00:00","sky_coverage":1}},{"type":"weather","id":null,"attributes":{"min_f":35.35000000000002,"max_f":44.72000000000003,"min_c":3.3500000000000227,"max_c":12.720000000000027,"day_feels_like_c":8.910000000000025,"day_feels_like_f":40.910000000000025,"description":"clear
+        sky","date":"2021-01-15T17:00:00+00:00","sky_coverage":2}},{"type":"weather","id":null,"attributes":{"min_f":32.51000000000005,"max_f":40.10000000000002,"min_c":0.5100000000000477,"max_c":8.100000000000023,"day_feels_like_c":3.4600000000000364,"day_feels_like_f":35.460000000000036,"description":"scattered
+        clouds","date":"2021-01-16T17:00:00+00:00","sky_coverage":32}},{"type":"weather","id":null,"attributes":{"min_f":32.170000000000016,"max_f":41.5,"min_c":0.17000000000001592,"max_c":9.5,"day_feels_like_c":5.920000000000016,"day_feels_like_f":37.920000000000016,"description":"scattered
+        clouds","date":"2021-01-17T17:00:00+00:00","sky_coverage":28}}]}'
+  recorded_at: Sun, 10 Jan 2021 21:10:11 GMT
+- request:
+    method: get
+    uri: http://localhost:3002/api/v1/weather?lat=37.6188889&lon=-122.39167
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '2460'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"type":"weather","id":null,"attributes":{"min_f":41.78000000000003,"max_f":45.69,"min_c":9.78000000000003,"max_c":13.689999999999998,"day_feels_like_c":10.980000000000018,"day_feels_like_f":42.98000000000002,"description":"broken
+        clouds","date":"2021-01-10T20:00:00+00:00","sky_coverage":67}},{"type":"weather","id":null,"attributes":{"min_f":41.72000000000003,"max_f":45.98000000000002,"min_c":9.720000000000027,"max_c":13.980000000000018,"day_feels_like_c":11.410000000000025,"day_feels_like_f":43.410000000000025,"description":"broken
+        clouds","date":"2021-01-11T20:00:00+00:00","sky_coverage":62}},{"type":"weather","id":null,"attributes":{"min_f":42.460000000000036,"max_f":46.29000000000002,"min_c":10.460000000000036,"max_c":14.29000000000002,"day_feels_like_c":11.370000000000005,"day_feels_like_f":43.370000000000005,"description":"overcast
+        clouds","date":"2021-01-12T20:00:00+00:00","sky_coverage":100}},{"type":"weather","id":null,"attributes":{"min_f":43.29000000000002,"max_f":47.370000000000005,"min_c":11.29000000000002,"max_c":15.370000000000005,"day_feels_like_c":14.510000000000048,"day_feels_like_f":46.51000000000005,"description":"overcast
+        clouds","date":"2021-01-13T20:00:00+00:00","sky_coverage":100}},{"type":"weather","id":null,"attributes":{"min_f":43.27000000000004,"max_f":47.97000000000003,"min_c":11.270000000000039,"max_c":15.970000000000027,"day_feels_like_c":14.660000000000025,"day_feels_like_f":46.660000000000025,"description":"scattered
+        clouds","date":"2021-01-14T20:00:00+00:00","sky_coverage":30}},{"type":"weather","id":null,"attributes":{"min_f":43.08000000000004,"max_f":47.670000000000016,"min_c":11.080000000000041,"max_c":15.670000000000016,"day_feels_like_c":14.230000000000018,"day_feels_like_f":46.23000000000002,"description":"few
+        clouds","date":"2021-01-15T20:00:00+00:00","sky_coverage":11}},{"type":"weather","id":null,"attributes":{"min_f":43.51000000000005,"max_f":48.48000000000002,"min_c":11.510000000000048,"max_c":16.480000000000018,"day_feels_like_c":13.470000000000027,"day_feels_like_f":45.47000000000003,"description":"clear
+        sky","date":"2021-01-16T20:00:00+00:00","sky_coverage":0}},{"type":"weather","id":null,"attributes":{"min_f":43.370000000000005,"max_f":48.04000000000002,"min_c":11.370000000000005,"max_c":16.04000000000002,"day_feels_like_c":12.82000000000005,"day_feels_like_f":44.82000000000005,"description":"few
+        clouds","date":"2021-01-17T20:00:00+00:00","sky_coverage":11}}]}'
+  recorded_at: Sun, 10 Jan 2021 21:10:12 GMT
+- request:
+    method: get
+    uri: http://localhost:3002/api/v1/weather?lat=45.5886111&lon=-122.5975
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '2446'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"type":"weather","id":null,"attributes":{"min_f":37.460000000000036,"max_f":41.10000000000002,"min_c":5.460000000000036,"max_c":9.100000000000023,"day_feels_like_c":6.260000000000048,"day_feels_like_f":38.26000000000005,"description":"moderate
+        rain","date":"2021-01-10T20:00:00+00:00","sky_coverage":100}},{"type":"weather","id":null,"attributes":{"min_f":37.93000000000001,"max_f":40.93000000000001,"min_c":5.930000000000007,"max_c":8.930000000000007,"day_feels_like_c":5.930000000000007,"day_feels_like_f":37.93000000000001,"description":"moderate
+        rain","date":"2021-01-11T20:00:00+00:00","sky_coverage":100}},{"type":"weather","id":null,"attributes":{"min_f":40.710000000000036,"max_f":45.03000000000003,"min_c":8.710000000000036,"max_c":13.03000000000003,"day_feels_like_c":9.900000000000034,"day_feels_like_f":41.900000000000034,"description":"moderate
+        rain","date":"2021-01-12T20:00:00+00:00","sky_coverage":100}},{"type":"weather","id":null,"attributes":{"min_f":38.94,"max_f":45.610000000000014,"min_c":6.939999999999998,"max_c":13.610000000000014,"day_feels_like_c":9.03000000000003,"day_feels_like_f":41.03000000000003,"description":"moderate
+        rain","date":"2021-01-13T20:00:00+00:00","sky_coverage":100}},{"type":"weather","id":null,"attributes":{"min_f":36.97000000000003,"max_f":41.410000000000025,"min_c":4.970000000000027,"max_c":9.410000000000025,"day_feels_like_c":7.82000000000005,"day_feels_like_f":39.82000000000005,"description":"light
+        rain","date":"2021-01-14T20:00:00+00:00","sky_coverage":93}},{"type":"weather","id":null,"attributes":{"min_f":36.860000000000014,"max_f":43.02000000000004,"min_c":4.860000000000014,"max_c":11.020000000000039,"day_feels_like_c":7.680000000000007,"day_feels_like_f":39.68000000000001,"description":"light
+        rain","date":"2021-01-15T20:00:00+00:00","sky_coverage":18}},{"type":"weather","id":null,"attributes":{"min_f":34.370000000000005,"max_f":39.870000000000005,"min_c":2.3700000000000045,"max_c":7.8700000000000045,"day_feels_like_c":4.8700000000000045,"day_feels_like_f":36.870000000000005,"description":"broken
+        clouds","date":"2021-01-16T20:00:00+00:00","sky_coverage":64}},{"type":"weather","id":null,"attributes":{"min_f":34.74000000000001,"max_f":41.650000000000034,"min_c":2.740000000000009,"max_c":9.650000000000034,"day_feels_like_c":7.180000000000007,"day_feels_like_f":39.18000000000001,"description":"light
+        rain","date":"2021-01-17T20:00:00+00:00","sky_coverage":60}}]}'
+  recorded_at: Sun, 10 Jan 2021 21:10:14 GMT
+- request:
+    method: get
+    uri: http://localhost:3002/api/v1/weather?lat=44.8819444&lon=-93.221667
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '2442'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"type":"weather","id":null,"attributes":{"min_f":23.720000000000027,"max_f":29.910000000000025,"min_c":-8.279999999999973,"max_c":-2.089999999999975,"day_feels_like_c":-8.239999999999952,"day_feels_like_f":23.760000000000048,"description":"broken
+        clouds","date":"2021-01-10T18:00:00+00:00","sky_coverage":67}},{"type":"weather","id":null,"attributes":{"min_f":25.33000000000004,"max_f":31.590000000000032,"min_c":-6.669999999999959,"max_c":-0.40999999999996817,"day_feels_like_c":-6.8799999999999955,"day_feels_like_f":25.120000000000005,"description":"overcast
+        clouds","date":"2021-01-11T18:00:00+00:00","sky_coverage":96}},{"type":"weather","id":null,"attributes":{"min_f":23.620000000000005,"max_f":32.80000000000001,"min_c":-8.379999999999995,"max_c":0.8000000000000114,"day_feels_like_c":-6.609999999999957,"day_feels_like_f":25.390000000000043,"description":"few
+        clouds","date":"2021-01-12T18:00:00+00:00","sky_coverage":22}},{"type":"weather","id":null,"attributes":{"min_f":29.08000000000004,"max_f":32.210000000000036,"min_c":-2.919999999999959,"max_c":0.21000000000003638,"day_feels_like_c":-3.5399999999999636,"day_feels_like_f":28.460000000000036,"description":"broken
+        clouds","date":"2021-01-13T18:00:00+00:00","sky_coverage":60}},{"type":"weather","id":null,"attributes":{"min_f":29.730000000000018,"max_f":34.5,"min_c":-2.269999999999982,"max_c":2.5,"day_feels_like_c":-5.42999999999995,"day_feels_like_f":26.57000000000005,"description":"light
+        rain","date":"2021-01-14T18:00:00+00:00","sky_coverage":98}},{"type":"weather","id":null,"attributes":{"min_f":20.930000000000007,"max_f":29.25,"min_c":-11.069999999999993,"max_c":-2.75,"day_feels_like_c":-16.339999999999975,"day_feels_like_f":15.660000000000025,"description":"light
+        snow","date":"2021-01-15T18:00:00+00:00","sky_coverage":100}},{"type":"weather","id":null,"attributes":{"min_f":17.82000000000005,"max_f":20.689999999999998,"min_c":-14.17999999999995,"max_c":-11.310000000000002,"day_feels_like_c":-19.70999999999998,"day_feels_like_f":12.29000000000002,"description":"overcast
+        clouds","date":"2021-01-16T18:00:00+00:00","sky_coverage":100}},{"type":"weather","id":null,"attributes":{"min_f":14.04000000000002,"max_f":18.600000000000023,"min_c":-17.95999999999998,"max_c":-13.399999999999977,"day_feels_like_c":-21.169999999999987,"day_feels_like_f":10.830000000000013,"description":"broken
+        clouds","date":"2021-01-17T18:00:00+00:00","sky_coverage":54}}]}'
+  recorded_at: Sun, 10 Jan 2021 21:10:15 GMT
+- request:
+    method: get
+    uri: http://localhost:3002/api/v1/weather?lat=32.7336111&lon=-117.18972
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '2412'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"type":"weather","id":null,"attributes":{"min_f":46.68000000000001,"max_f":52.84000000000003,"min_c":14.680000000000007,"max_c":20.840000000000032,"day_feels_like_c":15.710000000000036,"day_feels_like_f":47.710000000000036,"description":"clear
+        sky","date":"2021-01-10T19:00:00+00:00","sky_coverage":0}},{"type":"weather","id":null,"attributes":{"min_f":46.670000000000016,"max_f":51.610000000000014,"min_c":14.670000000000016,"max_c":19.610000000000014,"day_feels_like_c":15.830000000000041,"day_feels_like_f":47.83000000000004,"description":"clear
+        sky","date":"2021-01-11T19:00:00+00:00","sky_coverage":0}},{"type":"weather","id":null,"attributes":{"min_f":46.94,"max_f":51.43000000000001,"min_c":14.939999999999998,"max_c":19.430000000000007,"day_feels_like_c":16.110000000000014,"day_feels_like_f":48.110000000000014,"description":"clear
+        sky","date":"2021-01-12T19:00:00+00:00","sky_coverage":8}},{"type":"weather","id":null,"attributes":{"min_f":47.47000000000003,"max_f":52.02000000000004,"min_c":15.470000000000027,"max_c":20.02000000000004,"day_feels_like_c":15.310000000000002,"day_feels_like_f":47.31,"description":"clear
+        sky","date":"2021-01-13T19:00:00+00:00","sky_coverage":6}},{"type":"weather","id":null,"attributes":{"min_f":48.82000000000005,"max_f":54.450000000000045,"min_c":16.82000000000005,"max_c":22.450000000000045,"day_feels_like_c":16.77000000000004,"day_feels_like_f":48.77000000000004,"description":"clear
+        sky","date":"2021-01-14T19:00:00+00:00","sky_coverage":7}},{"type":"weather","id":null,"attributes":{"min_f":50.410000000000025,"max_f":55.620000000000005,"min_c":18.410000000000025,"max_c":23.620000000000005,"day_feels_like_c":19.05000000000001,"day_feels_like_f":51.05000000000001,"description":"clear
+        sky","date":"2021-01-15T19:00:00+00:00","sky_coverage":0}},{"type":"weather","id":null,"attributes":{"min_f":49.48000000000002,"max_f":55.24000000000001,"min_c":17.480000000000018,"max_c":23.24000000000001,"day_feels_like_c":18.52000000000004,"day_feels_like_f":50.52000000000004,"description":"clear
+        sky","date":"2021-01-16T19:00:00+00:00","sky_coverage":0}},{"type":"weather","id":null,"attributes":{"min_f":50.14000000000004,"max_f":55.170000000000016,"min_c":18.140000000000043,"max_c":23.170000000000016,"day_feels_like_c":18.100000000000023,"day_feels_like_f":50.10000000000002,"description":"clear
+        sky","date":"2021-01-17T19:00:00+00:00","sky_coverage":0}}]}'
+  recorded_at: Sun, 10 Jan 2021 21:10:16 GMT
+- request:
+    method: get
+    uri: http://localhost:3002/api/v1/weather?lat=35.8777778&lon=-78.7875
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '2366'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"type":"weather","id":null,"attributes":{"min_f":31.870000000000005,"max_f":42.48000000000002,"min_c":-0.12999999999999545,"max_c":10.480000000000018,"day_feels_like_c":6.07000000000005,"day_feels_like_f":38.07000000000005,"description":"clear
+        sky","date":"2021-01-10T17:00:00+00:00","sky_coverage":1}},{"type":"weather","id":null,"attributes":{"min_f":33.09000000000003,"max_f":40.56,"min_c":1.0900000000000318,"max_c":8.560000000000002,"day_feels_like_c":3.840000000000032,"day_feels_like_f":35.84000000000003,"description":"overcast
+        clouds","date":"2021-01-11T17:00:00+00:00","sky_coverage":86}},{"type":"weather","id":null,"attributes":{"min_f":33.93000000000001,"max_f":43.0,"min_c":1.9300000000000068,"max_c":11.0,"day_feels_like_c":6.150000000000034,"day_feels_like_f":38.150000000000034,"description":"clear
+        sky","date":"2021-01-12T17:00:00+00:00","sky_coverage":1}},{"type":"weather","id":null,"attributes":{"min_f":34.150000000000034,"max_f":43.670000000000016,"min_c":2.150000000000034,"max_c":11.670000000000016,"day_feels_like_c":8.150000000000034,"day_feels_like_f":40.150000000000034,"description":"few
+        clouds","date":"2021-01-13T17:00:00+00:00","sky_coverage":22}},{"type":"weather","id":null,"attributes":{"min_f":34.24000000000001,"max_f":43.160000000000025,"min_c":2.240000000000009,"max_c":11.160000000000025,"day_feels_like_c":6.910000000000025,"day_feels_like_f":38.910000000000025,"description":"broken
+        clouds","date":"2021-01-14T17:00:00+00:00","sky_coverage":62}},{"type":"weather","id":null,"attributes":{"min_f":35.870000000000005,"max_f":45.48000000000002,"min_c":3.8700000000000045,"max_c":13.480000000000018,"day_feels_like_c":9.5,"day_feels_like_f":41.5,"description":"light
+        rain","date":"2021-01-15T17:00:00+00:00","sky_coverage":11}},{"type":"weather","id":null,"attributes":{"min_f":33.02000000000004,"max_f":39.379999999999995,"min_c":1.0200000000000387,"max_c":7.3799999999999955,"day_feels_like_c":1.25,"day_feels_like_f":33.25,"description":"clear
+        sky","date":"2021-01-16T17:00:00+00:00","sky_coverage":0}},{"type":"weather","id":null,"attributes":{"min_f":32.629999999999995,"max_f":40.03000000000003,"min_c":0.6299999999999955,"max_c":8.03000000000003,"day_feels_like_c":3.7200000000000273,"day_feels_like_f":35.72000000000003,"description":"scattered
+        clouds","date":"2021-01-17T17:00:00+00:00","sky_coverage":49}}]}'
+  recorded_at: Sun, 10 Jan 2021 21:10:18 GMT
+- request:
+    method: get
+    uri: http://localhost:3002/api/v1/weather?lat=39.1752778&lon=-76.668333
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '2395'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"type":"weather","id":null,"attributes":{"min_f":32.32000000000005,"max_f":40.30000000000001,"min_c":0.32000000000005,"max_c":8.300000000000011,"day_feels_like_c":0.8500000000000227,"day_feels_like_f":32.85000000000002,"description":"clear
+        sky","date":"2021-01-10T17:00:00+00:00","sky_coverage":1}},{"type":"weather","id":null,"attributes":{"min_f":32.79000000000002,"max_f":37.670000000000016,"min_c":0.7900000000000205,"max_c":5.670000000000016,"day_feels_like_c":1.3500000000000227,"day_feels_like_f":33.35000000000002,"description":"overcast
+        clouds","date":"2021-01-11T17:00:00+00:00","sky_coverage":100}},{"type":"weather","id":null,"attributes":{"min_f":32.920000000000016,"max_f":39.710000000000036,"min_c":0.9200000000000159,"max_c":7.710000000000036,"day_feels_like_c":1.400000000000034,"day_feels_like_f":33.400000000000034,"description":"clear
+        sky","date":"2021-01-12T17:00:00+00:00","sky_coverage":0}},{"type":"weather","id":null,"attributes":{"min_f":33.57000000000005,"max_f":40.410000000000025,"min_c":1.57000000000005,"max_c":8.410000000000025,"day_feels_like_c":4.2000000000000455,"day_feels_like_f":36.200000000000045,"description":"clear
+        sky","date":"2021-01-13T17:00:00+00:00","sky_coverage":0}},{"type":"weather","id":null,"attributes":{"min_f":35.379999999999995,"max_f":40.55000000000001,"min_c":3.3799999999999955,"max_c":8.550000000000011,"day_feels_like_c":4.310000000000002,"day_feels_like_f":36.31,"description":"broken
+        clouds","date":"2021-01-14T17:00:00+00:00","sky_coverage":65}},{"type":"weather","id":null,"attributes":{"min_f":35.79000000000002,"max_f":40.76000000000005,"min_c":3.7900000000000205,"max_c":8.760000000000048,"day_feels_like_c":3.160000000000025,"day_feels_like_f":35.160000000000025,"description":"overcast
+        clouds","date":"2021-01-15T17:00:00+00:00","sky_coverage":99}},{"type":"weather","id":null,"attributes":{"min_f":33.0,"max_f":36.360000000000014,"min_c":1.0,"max_c":4.360000000000014,"day_feels_like_c":-2.2199999999999704,"day_feels_like_f":29.78000000000003,"description":"scattered
+        clouds","date":"2021-01-16T17:00:00+00:00","sky_coverage":47}},{"type":"weather","id":null,"attributes":{"min_f":31.79000000000002,"max_f":35.25,"min_c":-0.20999999999997954,"max_c":3.25,"day_feels_like_c":-3.609999999999957,"day_feels_like_f":28.390000000000043,"description":"clear
+        sky","date":"2021-01-17T17:00:00+00:00","sky_coverage":0}}]}'
+  recorded_at: Sun, 10 Jan 2021 21:10:19 GMT
+- request:
+    method: get
+    uri: http://localhost:3002/api/v1/weather?lat=41.7861111&lon=-87.7525
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '2403'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"type":"weather","id":null,"attributes":{"min_f":28.430000000000007,"max_f":31.340000000000032,"min_c":-3.569999999999993,"max_c":-0.6599999999999682,"day_feels_like_c":-4.289999999999964,"day_feels_like_f":27.710000000000036,"description":"overcast
+        clouds","date":"2021-01-10T17:00:00+00:00","sky_coverage":100}},{"type":"weather","id":null,"attributes":{"min_f":27.420000000000016,"max_f":30.79000000000002,"min_c":-4.579999999999984,"max_c":-1.2099999999999795,"day_feels_like_c":-7.669999999999959,"day_feels_like_f":24.33000000000004,"description":"overcast
+        clouds","date":"2021-01-11T17:00:00+00:00","sky_coverage":95}},{"type":"weather","id":null,"attributes":{"min_f":30.0,"max_f":32.629999999999995,"min_c":-2.0,"max_c":0.6299999999999955,"day_feels_like_c":-5.5,"day_feels_like_f":26.5,"description":"broken
+        clouds","date":"2021-01-12T17:00:00+00:00","sky_coverage":72}},{"type":"weather","id":null,"attributes":{"min_f":32.150000000000034,"max_f":33.69,"min_c":0.1500000000000341,"max_c":1.6899999999999977,"day_feels_like_c":-3.349999999999966,"day_feels_like_f":28.650000000000034,"description":"overcast
+        clouds","date":"2021-01-13T17:00:00+00:00","sky_coverage":100}},{"type":"weather","id":null,"attributes":{"min_f":31.810000000000002,"max_f":34.650000000000034,"min_c":-0.18999999999999773,"max_c":2.650000000000034,"day_feels_like_c":-2.909999999999968,"day_feels_like_f":29.090000000000032,"description":"light
+        rain","date":"2021-01-14T17:00:00+00:00","sky_coverage":100}},{"type":"weather","id":null,"attributes":{"min_f":27.140000000000043,"max_f":32.54000000000002,"min_c":-4.859999999999957,"max_c":0.5400000000000205,"day_feels_like_c":-9.449999999999989,"day_feels_like_f":22.55000000000001,"description":"light
+        snow","date":"2021-01-15T18:00:00+00:00","sky_coverage":76}},{"type":"weather","id":null,"attributes":{"min_f":23.350000000000023,"max_f":26.140000000000043,"min_c":-8.649999999999977,"max_c":-5.859999999999957,"day_feels_like_c":-14.579999999999984,"day_feels_like_f":17.420000000000016,"description":"overcast
+        clouds","date":"2021-01-16T18:00:00+00:00","sky_coverage":100}},{"type":"weather","id":null,"attributes":{"min_f":22.0,"max_f":25.49000000000001,"min_c":-10.0,"max_c":-6.509999999999991,"day_feels_like_c":-12.819999999999993,"day_feels_like_f":19.180000000000007,"description":"clear
+        sky","date":"2021-01-17T18:00:00+00:00","sky_coverage":0}}]}'
+  recorded_at: Sun, 10 Jan 2021 21:10:21 GMT
+recorded_with: VCR 6.0.0

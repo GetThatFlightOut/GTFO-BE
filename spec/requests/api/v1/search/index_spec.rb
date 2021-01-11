@@ -28,4 +28,34 @@ RSpec.describe 'Search', :vcr do
     expect(trips[:data][0][:attributes][:weather]).to be_an Array
     expect(trips[:data][0][:attributes][:weather]).to_not be_a Hash
   end
+
+  xit 'returns an error message when the flight_params are incomplete' do
+    # This test is failing. We ran this in the Chrome terminal and it ACTUALLY works.
+    # The expectation is that if you leave a date empty you will get an error:
+      # {
+      #   "error": "Invalid Data",
+      #   "status": 400
+      # }
+    # However, we were unable to make it pass in RSpec
+    # Please take a look and see if you have any insights as to how to achieve a passing test
+    # Please note the application.yml ports for WEATHER_API_HOST and FLIGHT_API_HOST
+    # FLIGHT_API_HOST: 'http://localhost:3001'
+    # WEATHER_API_HOST: 'http://localhost:3002'
+    flight_params = {
+            :departure_airport => 'DEN',
+            :departure_date => '',
+            :trip_duration => 5,
+            :limit => 20
+            }
+    get '/api/v1/search', params: flight_params
+
+    response = JSON.parse(response.body, symbolize_names: true)
+    expect(response).to be_a Hash
+    expect(response).to_not be_successful
+    expect(response[:status]).to eq(400)
+    expect(response[:error]).to eq('Invalid Data')
+  end
+
+  xit 'returns an error message when the flight_params have invalid dates'
+
 end

@@ -145,7 +145,7 @@ This is an example of an error response for Invalid Data (Missing/Incorrect)
  
 #### Sheryl Stillman: [LinkedIn](https://www.linkedin.com/in/sherylstillman1/), [Email](mailto:sheryl.stillman@gmail.com), [GitHub](https://github.com/stillsheryl)
     
-#### Aidan Murray:  [LinkedIn], [Email](mailto:aidanhansm@gmail.com), [GitHub](https://github.com/TeknoServal)
+#### Aidan Murray:  [LinkedIn](http://www.linkedin.com/in/aidan-murray-teknoserval), [Email](mailto:aidanhansm@gmail.com), [GitHub](https://github.com/TeknoServal)
       
 #### Jesse Mellinger: [LinkedIn](https://www.linkedin.com/in/jesse-mellinger/), [Email](mailto:jesse.m.mellinger@gmail.com), [GitHub](https://github.com/JesseMellinger)
         

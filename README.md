@@ -19,6 +19,7 @@ This project part of a Service-Oriented Architecture (SOA) application. The Weat
 ## How to Install Weather-API
 ## API Contract
 
+* Link to see the examples in real-time
 Example of BackEnd to FrontEnd JSON
 ```
 {
@@ -134,24 +135,24 @@ This is an example of an error response for Invalid Data (Missing/Incorrect)
   
 ## Contact
 
-#### Todd Estes: [LinkedIn](https://www.linkedin.com/in/toddwestes/), [Email](elestes@gmail.com), [GitHub](Todd-Estes)
+#### Todd Estes: [LinkedIn](https://www.linkedin.com/in/toddwestes/), [Email](mailto:elestes@gmail.com), [GitHub](https://github.com/Todd-Estes)
  
-#### Connor Ferguson: [LinkedIn](https://www.linkedin.com/in/connor-p-ferguson/), [Email](cpfergus1@gmail.com), [GitHub](cpfergus1)
+#### Connor Ferguson: [LinkedIn](https://www.linkedin.com/in/connor-p-ferguson/), [Email](mailto:cpfergus1@gmail.com), [GitHub](https://github.com/cpfergus1)
  
-#### George Soderholm: [LinkedIn](https://www.linkedin.com/in/george-soderholm-05776947/), [Email](georgesoderholm@gmail.com), [GitHub](GeorgieGirl24)
+#### George Soderholm: [LinkedIn](https://www.linkedin.com/in/george-soderholm-05776947/), [Email](mailto:georgesoderholm@gmail.com), [GitHub](https://github.com/GeorgieGirl24)
     
-#### Sage Freeman-Gonzales: [LinkedIn](https://www.linkedin.com/in/sagefreemangonzales/), [Email](sagegonzales15@gmail.com), [GitHub](SageOfCode)
+#### Sage Freeman-Gonzales: [LinkedIn](https://www.linkedin.com/in/sagefreemangonzales/), [Email](mailto:sagegonzales15@gmail.com), [GitHub](https://github.com/SageOfCode)
  
-#### Sheryl Stillman: [LinkedIn](https://www.linkedin.com/in/sherylstillman1/), [Email](sheryl.stillman@gmail.com), [GitHub](stillsheryl)
+#### Sheryl Stillman: [LinkedIn](https://www.linkedin.com/in/sherylstillman1/), [Email](mailto:sheryl.stillman@gmail.com), [GitHub](https://github.com/stillsheryl)
     
-#### Aidan Murray:  [LinkedIn], [Email](aidanhansm@gmail.com), [GitHub](TeknoServal)
+#### Aidan Murray:  [LinkedIn], [Email](mailto:aidanhansm@gmail.com), [GitHub](https://github.com/TeknoServal)
       
-#### Jesse Mellinger: [LinkedIn](https://www.linkedin.com/in/jesse-mellinger/), [Email](jesse.m.mellinger@gmail.com), [GitHub](JesseMellinger)
+#### Jesse Mellinger: [LinkedIn](https://www.linkedin.com/in/jesse-mellinger/), [Email](mailto:jesse.m.mellinger@gmail.com), [GitHub](https://github.com/JesseMellinger)
         
-#### Nick King: [LinkedIn](https://www.linkedin.com/in/nick-king-3128501ba/), [Email](nickmaxking@gmail.com), [GitHub](nmking22)
+#### Nick King: [LinkedIn](https://www.linkedin.com/in/nick-king-3128501ba/), [Email](mailto:nickmaxking@gmail.com), [GitHub](https://github.com/nmking22)
  
-#### Brian Liu: [LinkedIn](https://www.linkedin.com/in/brian-liu-8356287b/), [Email](brian.b.liu@gmail.com), [GitHub](badgerbreezy)
+#### Brian Liu: [LinkedIn](https://www.linkedin.com/in/brian-liu-8356287b/), [Email](mailto:brian.b.liu@gmail.com), [GitHub](https://github.com/badgerbreezy)
     
-#### Will Dunlap: [LinkedIn](https://www.linkedin.com/in/willwdunlap/), [Email](dunlapww@gmail.com), [GitHub](dunlapww)
+#### Will Dunlap: [LinkedIn](https://www.linkedin.com/in/willwdunlap/), [Email](mailto:dunlapww@gmail.com), [GitHub](https://github.com/dunlapww)
    
 ## Acknowledgments

@@ -3,7 +3,7 @@ class Api::V1::SearchController < ApplicationController
     trips = TripFacade.get_trips(flight_params)
     if trips.class == Hash
       payload = {
-          error: "Invalid Data",
+          error: trips[:message].first[:errors].first,
           status: 400
         }
       render :json => payload, :status => :bad_request

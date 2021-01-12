@@ -38,14 +38,28 @@ RSpec.describe 'Search', :vcr do
             }
 
     get '/api/v1/search', params: flight_params
-    
+
     trips = JSON.parse(response.body, symbolize_names: true)
 
     expect(trips).to be_a Hash
     expect(trips[:status]).to eq(400)
-    expect(trips[:error]).to eq('Invalid Data')
+    expect(trips[:error]).to eq("Could not parse . Valid formats: %d/%m/%Y, %d/%m/%Y %H:%M")
   end
 
-  xit 'returns an error message when the flight_params have invalid dates'
+  it 'returns an error message when the flight_params have invalid dates' do
+    flight_params = {
+            :departure_airport => 'DEN',
+            :departure_date => '30/01/2030',
+            :trip_duration => 5,
+            :limit => 20
+            }
 
+    get '/api/v1/search', params: flight_params
+
+    trips = JSON.parse(response.body, symbolize_names: true)
+
+    expect(trips).to be_a Hash
+    expect(trips[:status]).to eq(400)
+    expect(trips[:error]).to eq("Year of the given date is far in the future.")
+  end
 end

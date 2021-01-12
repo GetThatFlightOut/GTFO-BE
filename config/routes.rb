@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :search, only: [:index]
-      get '/search/lucky', to: 'search#lucky'
     end
   end
 end

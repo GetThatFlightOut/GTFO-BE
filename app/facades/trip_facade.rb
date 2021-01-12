@@ -1,31 +1,28 @@
 class TripFacade
   def self.get_trips(flight_params)
     flights = FlightService.get_flights(flight_params)
-    trips = []
-
+    @trips = []
     if flights[:message].nil?
-      # mutex = Mutex.new
       threads = []
       flights[:data].each_with_index do |flight, index|
         threads << Thread.new do
-          t = Thread.current
-          # mutex.synchronize do
-          t[:lat] = flight[:attributes][:latitude]
-          t[:lon] = flight[:attributes][:longitude]
-          t[:weather] = WeatherService.get_weather(lat, lon)
-          t[:trips] << Trip.new(flight, weather, index)
-          sleep 0.5
-          # end
+          Rails.application.executor.wrap do
+            sleep 0.1
+            t = Thread.current
+            lat = flight[:attributes][:latitude]
+            lon = flight[:attributes][:longitude]
+            weather = WeatherService.get_weather(lat, lon)
+            t[:trip] = Trip.new(flight, weather, index)
+            t.exit
+          end
         end
       end
-      binding.pry
       threads.each do |t|
         t.join
-        t.pass
+        @trips << t[:trip]
+        t.exit
       end
-      # render text: "Finished #{flights.length} blocking operations asynchronously."
-      trips #return value: an array of Trip Objects
-
+      @trips #return value: an array of Trip Objects
     else
       flights
     end

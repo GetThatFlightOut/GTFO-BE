@@ -4,7 +4,6 @@ class TripFacade
     @trips = []
 
     if flights[:message].nil?
-      mutex = Mutex.new
       threads = []
       flights[:data].each_with_index do |flight, index|
         threads << Thread.new do

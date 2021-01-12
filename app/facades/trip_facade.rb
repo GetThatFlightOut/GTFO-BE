@@ -10,7 +10,6 @@ class TripFacade
         threads << Thread.new do
           Rails.application.executor.wrap do
             t = Thread.current
-            # Thread.start(t)
 
             lat = flight[:attributes][:latitude]
             lon = flight[:attributes][:longitude]
@@ -19,16 +18,12 @@ class TripFacade
           end
         end
       end
-      # require 'pry'; binding.pry
       threads.map(&:value).flatten
-      # require 'pry'; binding.pry
       threads.each do |t|
-        # require 'pry'; binding.pry
         @trips << t[:trip]
         t.exit
       end
-      # require 'pry'; binding.pry
-      # render text: "Finished #{flights.length} blocking operations asynchronously."
+
       @trips # return value: an array of Trip Objects
 
     else

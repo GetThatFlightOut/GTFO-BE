@@ -1,0 +1,36 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3001/flights?date_from=&date_to=&fly_from=DEN&limit=20&nights_in_dst_from=5&nights_in_dst_to=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '115'
+    body:
+      encoding: UTF-8
+      string: '{"message":[{"param":"_fly_from_date","errors":["Could not parse .
+        Valid formats: %d\/%m\/%Y, %d\/%m\/%Y %H:%M"]}]}'
+  recorded_at: Mon, 11 Jan 2021 01:46:57 GMT
+recorded_with: VCR 6.0.0

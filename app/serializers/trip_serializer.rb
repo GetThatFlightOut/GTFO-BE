@@ -60,6 +60,8 @@ class TripSerializer
   #  :sky_coverage,
 
   attributes :weather do |trip|
-    trip.weathers
+    trip.weathers.map do |weather|
+      WeatherSerializer.new(weather)
+    end
   end
 end

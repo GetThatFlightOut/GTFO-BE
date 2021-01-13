@@ -10,9 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2021_01_13_004957) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "trips", force: :cascade do |t|
+    t.string "origin_city"
+    t.string "destination_city"
+    t.string "origin_iata"
+    t.string "destination_iata"
+    t.float "latitude"
+    t.float "longitude"
+    t.integer "price"
+    t.datetime "departure_datetime"
+    t.datetime "arrival_datetime"
+    t.datetime "r_departure_datetime"
+    t.datetime "r_arrival_datetime"
+    t.string "booking_link"
+    t.integer "trip_duration"
+    t.integer "flight_id"
+    t.bigint "weather_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["weather_id"], name: "index_trips_on_weather_id"
+  end
 
 end

@@ -1,10 +1,10 @@
 # README
-# Weather-API
+# GTFO-BE
 ![image](https://user-images.githubusercontent.com/68172332/104384272-6d70f100-54ee-11eb-94ba-287258e83de7.png)
 
 ## Table of Contents
   - [What it does](#what-it-does)
-  - [How to Install Weather-API](#how-to-install-weather-api)
+  - [How to Install GTFO-BE](#how-to-install-gtfo-be)
   - [API Contract](#api-contract)
   - [Dependencies](#dependencies)
   - [Testing](#testing)
@@ -15,9 +15,9 @@
 
 ## What it does
 
-This project part of a Service-Oriented Architecture (SOA) application. The Weather-API serves as an intermediary, or microservice, from the Open Weather API and the GTFO-BE repo.
+This project part of a Service-Oriented Architecture (SOA) application. The GTFO-BE serves as an intermediary, or microservice, from the GTFO-FE repo and the Weather-API and Flight-API repos.
 
-## How to Install Weather-API
+## How to Install GTFO-BE
 ## API Contract
 
 * Link to see the examples in real-time

@@ -10,10 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_13_005553) do
+ActiveRecord::Schema.define(version: 2021_01_13_213224) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "request_trips", force: :cascade do |t|
+    t.bigint "trip_id"
+    t.bigint "request_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["request_id"], name: "index_request_trips_on_request_id"
+    t.index ["trip_id"], name: "index_request_trips_on_trip_id"
+  end
+
+  create_table "requests", force: :cascade do |t|
+    t.string "uid"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "trip_weathers", force: :cascade do |t|
+    t.bigint "trip_id"
+    t.bigint "weather_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["trip_id"], name: "index_trip_weathers_on_trip_id"
+    t.index ["weather_id"], name: "index_trip_weathers_on_weather_id"
+  end
 
   create_table "trips", force: :cascade do |t|
     t.string "origin_city"
@@ -33,6 +57,7 @@ ActiveRecord::Schema.define(version: 2021_01_13_005553) do
     t.bigint "weather_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
     t.index ["weather_id"], name: "index_trips_on_weather_id"
   end
 
@@ -50,4 +75,8 @@ ActiveRecord::Schema.define(version: 2021_01_13_005553) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "request_trips", "requests"
+  add_foreign_key "request_trips", "trips"
+  add_foreign_key "trip_weathers", "trips"
+  add_foreign_key "trip_weathers", "weathers"
 end

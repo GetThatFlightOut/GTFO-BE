@@ -50,14 +50,6 @@ class TripSerializer
   attributes :sky_coverage do |trip|
     trip.weathers[0].sky_coverage
   end
-  #  :max_f,
-  #  :min_c,
-  #  :max_c,
-  #  :day_feels_like_f,
-  #  :day_feels_like_c,
-  #  :description,
-  #  :weather_date,
-  #  :sky_coverage,
 
   attributes :weather do |trip|
     trip.weathers.map do |weather|

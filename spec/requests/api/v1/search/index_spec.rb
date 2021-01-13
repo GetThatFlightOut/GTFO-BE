@@ -10,14 +10,12 @@ RSpec.describe 'Search', :vcr do
             }
     get '/api/v1/search', params: flight_params
     trips = JSON.parse(response.body, symbolize_names: true)
-
     expect(response.body).to be_a String
     expect(response).to be_successful
     expect(trips[:data]).to be_an Array
     expect(trips[:data].count).to eq(20)
     expect(trips[:data].count).to_not eq(10)
     expect(trips[:data][0][:attributes][:weather].count).to eq(8)
-    expect(trips[:data][0][:id]).to eq('0')
     expect(trips[:data][0][:id]).to_not eq(nil)
     expect(trips[:data][0][:attributes]).to be_a Hash
     expect(trips[:data][0][:attributes][:origin_city]).to be_a String
@@ -78,7 +76,6 @@ RSpec.describe 'Search', :vcr do
     expect(trips[:data]).to be_an Array
     expect(trips[:data].count).to eq(1)
     expect(trips[:data][0][:attributes][:weather].count).to eq(8)
-    expect(trips[:data][0][:id]).to eq('0')
     expect(trips[:data][0][:id]).to_not eq(nil)
     expect(trips[:data][0][:attributes]).to be_a Hash
     expect(trips[:data][0][:attributes][:origin_city]).to be_a String

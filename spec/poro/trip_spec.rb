@@ -61,7 +61,6 @@ RSpec.describe Trip do
     trip = Trip.new_trip(flight, weather, 0)
 
     expect(trip).to be_a Trip
-    expect(trip.id).to eq(0)
     expect(trip.origin_city).to eq(flight[:attributes][:origin_city])
     expect(trip.flight_id).to eq(flight[:attributes][:id])
     expect(trip.weathers[0].min_f).to eq(weather[:data][0][:attributes][:min_f])

@@ -18,6 +18,30 @@
 This project part of a Service-Oriented Architecture (SOA) application. The GTFO-BE serves as an intermediary, or microservice, from the GTFO-FE repo and the Weather-API and Flight-API repos.
 
 ## How to Install GTFO-BE
+
+For usage on your local machine follow the instructions listed below:
+
+```
+git clone git@github.com:GetThatFlightOut/GTFO-BE.git
+cd GTFO-BE
+bundle install
+rake db:{create,migrate}
+rails server
+visit localhost:3000 in your web browser
+```
+
+To see an example response like that below you can use Postman to send a GET request to our BE hosted on Heroku here: https://gtfo-be.herokuapp.com/api/v1/search
+
+Required parameters:
+
+`:departure_airport`
+
+`:departure_date`
+
+`:trip_duration`
+
+`:limit`
+
 ## API Contract
 
 * Link to see the examples in real-time

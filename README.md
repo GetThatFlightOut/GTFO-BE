@@ -1,9 +1,10 @@
 # README
-# Weather-API
+# GTFO-BE
+![image](https://user-images.githubusercontent.com/68172332/104384272-6d70f100-54ee-11eb-94ba-287258e83de7.png)
 
 ## Table of Contents
   - [What it does](#what-it-does)
-  - [How to Install Weather-API](#how-to-install-weather-api)
+  - [How to Install GTFO-BE](#how-to-install-gtfo-be)
   - [API Contract](#api-contract)
   - [Dependencies](#dependencies)
   - [Testing](#testing)
@@ -14,9 +15,33 @@
 
 ## What it does
 
-This project part of a Service-Oriented Architecture (SOA) application. The Weather-API serves as an intermediary, or microservice, from the Open Weather API and the GTFO-BE repo.
+This project part of a Service-Oriented Architecture (SOA) application. The GTFO-BE serves as an intermediary, or microservice, from the GTFO-FE repo and the Weather-API and Flight-API repos.
 
-## How to Install Weather-API
+## How to Install GTFO-BE
+
+For usage on your local machine follow the instructions listed below:
+
+```
+git clone git@github.com:GetThatFlightOut/GTFO-BE.git
+cd GTFO-BE
+bundle install
+rake db:{create,migrate}
+rails server
+visit localhost:3000 in your web browser
+```
+
+To see an example response like that below you can use Postman to send a GET request to our BE hosted on Heroku here: https://gtfo-be.herokuapp.com/api/v1/search
+
+Required parameters:
+
+`:departure_airport`
+
+`:departure_date`
+
+`:trip_duration`
+
+`:limit`
+
 ## API Contract
 
 * Link to see the examples in real-time

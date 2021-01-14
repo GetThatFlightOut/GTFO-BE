@@ -39,30 +39,16 @@ RSpec.describe 'Search', :vcr do
       trip_duration: 5,
       limit: 20
     }
+    # puts '----- #1'
     get '/api/v1/search', params: flight_params
     response_id = JSON.parse(response.body, symbolize_names: true)
 
-    get "/api/v1/requests/#{response_id[:data][:request_id]}"
-    trips = JSON.parse(response.body, symbolize_names: true)
-
-    expect(response.body).to be_a String
-    expect(response).to be_successful
-
-    expect(trips[:included]).to be_an Array
-    expect(trips[:included].count).to eq(20)
-    expect(trips[:included].count).to_not eq(10)
-    expect(trips[:included][0][:attributes][:weather].count).to eq(8)
-    expect(trips[:included][0][:id]).to_not eq(nil)
-    expect(trips[:included][0][:attributes]).to be_a Hash
-    expect(trips[:included][0][:attributes][:origin_city]).to be_a String
-    expect(trips[:included][0][:attributes][:price]).to be_a Integer
-    expect(trips[:included][0][:attributes][:booking_link]).to be_a String
-    expect(trips[:included][0][:attributes][:min_f]).to be_a Float
-    expect(trips[:included][0][:attributes][:day_feels_like_c]).to be_a Float
-    expect(trips[:included][0][:attributes][:weather]).to be_an Array
-    expect(trips[:included][0][:attributes][:weather]).to_not be_a Hash
-
     # test again for weather re-usal
+
+    # puts '----- #2'
+    get '/api/v1/search', params: flight_params
+    response_id = JSON.parse(response.body, symbolize_names: true)
+    # puts '----- #3'
 
     get "/api/v1/requests/#{response_id[:data][:request_id]}"
     trips = JSON.parse(response.body, symbolize_names: true)

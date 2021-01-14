@@ -6,6 +6,7 @@
   - [What it does](#what-it-does)
   - [How to Install GTFO-BE](#how-to-install-gtfo-be)
   - [API Contract](#api-contract)
+  - [Schema](#schema)
   - [Dependencies](#dependencies)
   - [Testing](#testing)
   - [Learning Goals](#learning-goals)
@@ -135,6 +136,14 @@ This is an example of an error response for Invalid Data (Missing/Incorrect)
 "status": 400
 }
 ```
+
+## Schema 
+
+ <p align="center">
+ <img src="https://i.imgur.com/OW5QQGw.png">
+  </p>
+  
+ 
 ## Dependencies
 
 

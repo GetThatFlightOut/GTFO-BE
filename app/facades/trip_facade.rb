@@ -9,10 +9,12 @@ class TripFacade
         threads << Thread.new do
           Rails.application.executor.wrap do
             t = Thread.current
-
+            # puts 'thread created'
             lat = flight[:attributes][:latitude]
-            lon = flight[:attributes][:longitude]
-            weather = WeatherService.get_weather(lat, lon)
+            long = flight[:attributes][:longitude]
+
+            weather = WeatherFacade.get_updated_weather(lat, long)
+
             t[:trip] = Trip.new_trip(flight, weather, index)
           end
         end
@@ -20,6 +22,7 @@ class TripFacade
       threads.map(&:value).flatten
       threads.each do |t|
         @trips << t[:trip]
+        # t.join
         t.exit
       end
 

@@ -9,22 +9,27 @@ RSpec.describe 'Search', :vcr do
             :limit => 20
             }
     get '/api/v1/search', params: flight_params
+    response_id = JSON.parse(response.body, symbolize_names: true)
+
+    get "/api/v1/requests/#{response_id[:data][0][:request_id]}"
     trips = JSON.parse(response.body, symbolize_names: true)
+
     expect(response.body).to be_a String
     expect(response).to be_successful
-    expect(trips[:data]).to be_an Array
-    expect(trips[:data].count).to eq(20)
-    expect(trips[:data].count).to_not eq(10)
-    expect(trips[:data][0][:attributes][:weather].count).to eq(8)
-    expect(trips[:data][0][:id]).to_not eq(nil)
-    expect(trips[:data][0][:attributes]).to be_a Hash
-    expect(trips[:data][0][:attributes][:origin_city]).to be_a String
-    expect(trips[:data][0][:attributes][:price]).to be_a Integer
-    expect(trips[:data][0][:attributes][:booking_link]).to be_a String
-    expect(trips[:data][0][:attributes][:min_f]).to be_a Float
-    expect(trips[:data][0][:attributes][:day_feels_like_c]).to be_a Float
-    expect(trips[:data][0][:attributes][:weather]).to be_an Array
-    expect(trips[:data][0][:attributes][:weather]).to_not be_a Hash
+
+    expect(trips[:included]).to be_an Array
+    expect(trips[:included].count).to eq(20)
+    expect(trips[:included].count).to_not eq(10)
+    expect(trips[:included][0][:attributes][:weather].count).to eq(8)
+    expect(trips[:included][0][:id]).to_not eq(nil)
+    expect(trips[:included][0][:attributes]).to be_a Hash
+    expect(trips[:included][0][:attributes][:origin_city]).to be_a String
+    expect(trips[:included][0][:attributes][:price]).to be_a Integer
+    expect(trips[:included][0][:attributes][:booking_link]).to be_a String
+    expect(trips[:included][0][:attributes][:min_f]).to be_a Float
+    expect(trips[:included][0][:attributes][:day_feels_like_c]).to be_a Float
+    expect(trips[:included][0][:attributes][:weather]).to be_an Array
+    expect(trips[:included][0][:attributes][:weather]).to_not be_a Hash
   end
 
   it 'returns an error message when the flight_params are incomplete' do
@@ -36,12 +41,11 @@ RSpec.describe 'Search', :vcr do
             }
 
     get '/api/v1/search', params: flight_params
+    response_id = JSON.parse(response.body, symbolize_names: true)
 
-    trips = JSON.parse(response.body, symbolize_names: true)
-
-    expect(trips).to be_a Hash
-    expect(trips[:status]).to eq(400)
-    expect(trips[:error]).to eq("Could not parse . Valid formats: %d/%m/%Y, %d/%m/%Y %H:%M")
+    expect(response_id).to be_a Hash
+    expect(response_id[:status]).to eq(400)
+    expect(response_id[:error]).to eq("Could not parse . Valid formats: %d/%m/%Y, %d/%m/%Y %H:%M")
   end
 
   it 'returns an error message when the flight_params have invalid dates' do
@@ -69,21 +73,23 @@ RSpec.describe 'Search', :vcr do
             :limit => 1
             }
     get '/api/v1/search', params: flight_params
-    trips = JSON.parse(response.body, symbolize_names: true)
+    response_id = JSON.parse(response.body, symbolize_names: true)
+
+    get "/api/v1/trips/#{response_id[:data][0][:trip_id]}"
+    trip = JSON.parse(response.body, symbolize_names: true)
 
     expect(response.body).to be_a String
     expect(response).to be_successful
-    expect(trips[:data]).to be_an Array
-    expect(trips[:data].count).to eq(1)
-    expect(trips[:data][0][:attributes][:weather].count).to eq(8)
-    expect(trips[:data][0][:id]).to_not eq(nil)
-    expect(trips[:data][0][:attributes]).to be_a Hash
-    expect(trips[:data][0][:attributes][:origin_city]).to be_a String
-    expect(trips[:data][0][:attributes][:price]).to be_a Integer
-    expect(trips[:data][0][:attributes][:booking_link]).to be_a String
-    expect(trips[:data][0][:attributes][:min_f]).to be_a Float
-    expect(trips[:data][0][:attributes][:day_feels_like_c]).to be_a Float
-    expect(trips[:data][0][:attributes][:weather]).to be_an Array
-    expect(trips[:data][0][:attributes][:weather]).to_not be_a Hash
+    expect(trip[:data]).to be_a Hash
+    expect(trip[:data][:attributes][:weather].count).to eq(8)
+    expect(trip[:data][:id]).to_not eq(nil)
+    expect(trip[:data][:attributes]).to be_a Hash
+    expect(trip[:data][:attributes][:origin_city]).to be_a String
+    expect(trip[:data][:attributes][:price]).to be_a Integer
+    expect(trip[:data][:attributes][:booking_link]).to be_a String
+    expect(trip[:data][:attributes][:min_f]).to be_a Float
+    expect(trip[:data][:attributes][:day_feels_like_c]).to be_a Float
+    expect(trip[:data][:attributes][:weather]).to be_an Array
+    expect(trip[:data][:attributes][:weather]).to_not be_a Hash
   end
 end

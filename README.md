@@ -16,7 +16,7 @@
 
 ## What it does
 
-This project part of a Service-Oriented Architecture (SOA) application that provides users with flight and weather information based on search parameters that the user provides. The GTFO-BE serves as an intermediary, or microservice, from the GTFO-FE repo and the Weather-API and Flight-API repos. This service collects data from both the Weather and Flight APIs and compiles the data into one service that the front end can call.
+This project part of a Service-Oriented Architecture (SOA) application that provides users with flight and weather information based on search parameters that the user provides. The GTFO-BE serves as an intermediary from the GTFO-FE repo and the Weather-API and Flight-API repos. This service collects data from both the Weather and Flight APIs and compiles the data into one service that the front end can call. 
 
 To view the production site, please visit the [GTFO link](https://gtfo-fe.herokuapp.com/).
 

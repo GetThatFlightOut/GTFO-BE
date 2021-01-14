@@ -1,0 +1,37 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:9393/api/v1/flights?date_from=30/01/2030&date_to=30/01/2030&fly_from=DEN&limit=20&nights_in_dst_from=5&nights_in_dst_to=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '171'
+    body:
+      encoding: UTF-8
+      string: '{"message":[{"param":"date_from","errors":["Year of the given date
+        is far in the future."]},{"param":"date_to","errors":["Year of the given date
+        is far in the future."]}]}'
+  recorded_at: Thu, 14 Jan 2021 22:41:43 GMT
+recorded_with: VCR 6.0.0

@@ -1,0 +1,84 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:9393/api/v1/flights?date_from=21/03/2021&date_to=21/03/2021&fly_from=DEN&limit=1&nights_in_dst_from=5&nights_in_dst_to=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/html;charset=utf-8
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '1418'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"663","type":"flight","attributes":{"origin_city":"Denver","destination_city":"San
+        Francisco","origin_iata":"DEN","destination_iata":"SFO","latitude":37.6188889,"longitude":-122.39167,"price":64,"departure_datetime":"2021-03-21T08:45:00.000+00:00","arrival_datetime":"2021-03-21T10:43:00.000+00:00","r_departure_datetime":"2021-03-26T06:05:00.000+00:00","r_arrival_datetime":"2021-03-26T09:37:00.000+00:00","booking_link":"https://www.kiwi.com/deep?from=DEN\u0026to=SFO\u0026flightsId=07130f9c49130000610ce095_0%7C0f9c071349180000d63282c2_0\u0026price=52\u0026passengers=1\u0026affilid=picky\u0026lang=en\u0026currency=USD\u0026booking_token=BYCp87xGApf4Pn985uYMokkUpeu2vaMI1mstHIXt_29sKu-bvb5huFCdhJMY1kKV8t1KgTbBaTUPg0Lqwv3IMTVZ9oz343LBZO4_UcBXocHSHtAKc7YGCOFIlUZu1BAbYWGJzu5sdEqvsbs2yO_2EXD2fWGLUnBiDNeYOgMGBEvwOqdssN32iRvMSqqyhg_B83-9az57wtYVHu3JytpegQq5CeZjZCR0u9NUi12rvYyp4KXtVZeBRwsRA9zOyPMI4iD6jU6difdIvsa9hNep_oE2CrCaNTeBtQvpDTn8iSbbR7fuzw9o5hYVU9yBIF3RJwotrAqYq7jwtj3nuZUOonLkBViT4ShHaYcRuIz3P_cCebQvmV-ZIMLeHilKxYN89juxG5wf3AYBhN3x7ARfxSEbR-jZdRU2_9rYAyB-173tQUdqz1EywiFLtL3Hh3GHwL6EZu-yNI1g6J81DCOsQV2cey_ymRFSUGJVciMiOkIxCJC0msUZxGBOjAZm6XR_8blccdM6IMYAdvsNtdbMlrLtbIt1qxJoBcRPfdSEH_PP5h738jkD9R2q37QObrXTbRmR6TjohDm_NtRqJBEfCOxKCCyszYaxcBfcgP6CiQudYonStNspu4U3DkQyRAm-mr_5XI6StBE2hiPD1opAPFXRkp5LdMlmExojpYkBteKB9gc0J7oRSMG52EL_dOouA8EkktTTDWKYBk3zQgtM5Qg==","trip_duration":5,"id":663}}]}'
+  recorded_at: Thu, 14 Jan 2021 22:41:57 GMT
+- request:
+    method: get
+    uri: https://gtfo-weather-api.herokuapp.com/api/v1/weather?lat=37.6188889&lon=-122.39167
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 14 Jan 2021 22:41:57 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '2374'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server:
+      - thin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"type":"weather","id":null,"attributes":{"min_f":44.25,"max_f":49.93000000000001,"min_c":12.25,"max_c":17.930000000000007,"day_feels_like_c":14.25,"day_feels_like_f":46.25,"description":"broken
+        clouds","date":"2021-01-14T20:00:00+00:00","sky_coverage":53}},{"type":"weather","id":null,"attributes":{"min_f":44.26000000000005,"max_f":48.72000000000003,"min_c":12.260000000000048,"max_c":16.720000000000027,"day_feels_like_c":14.25,"day_feels_like_f":46.25,"description":"clear
+        sky","date":"2021-01-15T20:00:00+00:00","sky_coverage":1}},{"type":"weather","id":null,"attributes":{"min_f":43.710000000000036,"max_f":47.670000000000016,"min_c":11.710000000000036,"max_c":15.670000000000016,"day_feels_like_c":13.390000000000043,"day_feels_like_f":45.39000000000004,"description":"overcast
+        clouds","date":"2021-01-16T20:00:00+00:00","sky_coverage":100}},{"type":"weather","id":null,"attributes":{"min_f":43.670000000000016,"max_f":48.57000000000005,"min_c":11.670000000000016,"max_c":16.57000000000005,"day_feels_like_c":14.170000000000016,"day_feels_like_f":46.170000000000016,"description":"clear
+        sky","date":"2021-01-17T20:00:00+00:00","sky_coverage":10}},{"type":"weather","id":null,"attributes":{"min_f":44.85000000000002,"max_f":49.99000000000001,"min_c":12.850000000000023,"max_c":17.99000000000001,"day_feels_like_c":10.850000000000023,"day_feels_like_f":42.85000000000002,"description":"clear
+        sky","date":"2021-01-18T20:00:00+00:00","sky_coverage":0}},{"type":"weather","id":null,"attributes":{"min_f":43.60000000000002,"max_f":47.460000000000036,"min_c":11.600000000000023,"max_c":15.460000000000036,"day_feels_like_c":5.890000000000043,"day_feels_like_f":37.89000000000004,"description":"clear
+        sky","date":"2021-01-19T20:00:00+00:00","sky_coverage":0}},{"type":"weather","id":null,"attributes":{"min_f":41.660000000000025,"max_f":47.34000000000003,"min_c":9.660000000000025,"max_c":15.340000000000032,"day_feels_like_c":10.550000000000011,"day_feels_like_f":42.55000000000001,"description":"clear
+        sky","date":"2021-01-20T20:00:00+00:00","sky_coverage":0}},{"type":"weather","id":null,"attributes":{"min_f":41.02000000000004,"max_f":45.57000000000005,"min_c":9.020000000000039,"max_c":13.57000000000005,"day_feels_like_c":10.460000000000036,"day_feels_like_f":42.460000000000036,"description":"clear
+        sky","date":"2021-01-21T20:00:00+00:00","sky_coverage":0}}]}'
+  recorded_at: Thu, 14 Jan 2021 22:41:58 GMT
+recorded_with: VCR 6.0.0

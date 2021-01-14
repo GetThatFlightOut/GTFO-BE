@@ -1,7 +1,7 @@
 class FlightService
   def self.get_flights(flight_params)
-    
-    response = conn.get '/flights' do |req|
+
+    response = conn.get '/api/v1/flights' do |req|
       req.params['fly_from'] = flight_params[:departure_airport]
       req.params['date_from'] = flight_params[:departure_date]
       req.params['date_to'] = flight_params[:departure_date]

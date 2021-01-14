@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :search, only: [:index]
+
+      get 'requests/:id', to: 'requests#show'
+      get '/trips/:id', to: 'trips#show'
     end
   end
 end

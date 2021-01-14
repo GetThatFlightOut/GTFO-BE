@@ -15,7 +15,11 @@
 
 ## What it does
 
-This project part of a Service-Oriented Architecture (SOA) application. The GTFO-BE serves as an intermediary, or microservice, from the GTFO-FE repo and the Weather-API and Flight-API repos.
+This project part of a Service-Oriented Architecture (SOA) application that provides users with flight and weather information based on search parameters that the user provides. The GTFO-BE serves as an intermediary, or microservice, from the GTFO-FE repo and the Weather-API and Flight-API repos. This service collects data from both the Weather and Flight APIs and compiles the data into one service that the front end can call.
+
+To view the production site, please visit the [GTFO link](https://gtfo-fe.herokuapp.com/).
+
+To view the other components of the application please visit the [Github Project Organization](https://github.com/GetThatFlightOut).
 
 ## How to Install GTFO-BE
 
@@ -30,17 +34,21 @@ rails server
 visit localhost:3000 in your web browser
 ```
 
-To see an example response like that below you can use Postman to send a GET request to our BE hosted on Heroku here: https://gtfo-be.herokuapp.com/api/v1/search
+To see an example response like that below you can use [Postman](https://www.postman.com/) to send a GET request to our BE hosted on Heroku here: https://gtfo-be.herokuapp.com/api/v1/search
 
 Required parameters:
 
-`:departure_airport`
+`:departure_airport` - (string) - the IATA code of the origin airport
 
-`:departure_date`
+`:departure_date` - (string) - %d/%m/%y - the earliest date considered for departing flight
 
-`:trip_duration`
+`:trip_duration` - (integer) - the number of days planned for the round trip
 
-`:limit`
+`:limit` - (integer) - the maximum number of results to be returned (default is currently 20 fo the index page)
+
+Sample view of an API call in Postman:
+![trips_call](https://user-images.githubusercontent.com/7945439/104528708-391c3400-55c5-11eb-807d-b95c37e0a4ae.png)
+
 
 ## API Contract
 
@@ -128,6 +136,8 @@ This is an example of an error response for Invalid Data (Missing/Incorrect)
 }
 ```
 ## Dependencies
+
+
 ## Testing
 
 * For testing our team implemented Travis CI with RSpec
@@ -135,6 +145,8 @@ This is an example of an error response for Invalid Data (Missing/Incorrect)
 > Travis CI is cloud based and when we submit a pull request, Travis will attempt to build our project and run the tests to ensure everything is working as expected. 
 
 > RSpec is a tool for unit testing that will ensure we have the intended functionality at each level of our code. 
+
+* In order to run the tests, run `bundle exec rspec` in the command line and you should have all passing tests.
 
 ## Learning Goals
 

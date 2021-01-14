@@ -6,6 +6,7 @@
   - [What it does](#what-it-does)
   - [How to Install GTFO-BE](#how-to-install-gtfo-be)
   - [API Contract](#api-contract)
+  - [Schema](#schema)
   - [Dependencies](#dependencies)
   - [Testing](#testing)
   - [Learning Goals](#learning-goals)
@@ -15,7 +16,7 @@
 
 ## What it does
 
-This project part of a Service-Oriented Architecture (SOA) application that provides users with flight and weather information based on search parameters that the user provides. The GTFO-BE serves as an intermediary, or microservice, from the GTFO-FE repo and the Weather-API and Flight-API repos. This service collects data from both the Weather and Flight APIs and compiles the data into one service that the front end can call.
+This project part of a Service-Oriented Architecture (SOA) application that provides users with flight and weather information based on search parameters that the user provides. The GTFO-BE serves as an intermediary from the GTFO-FE repo and the Weather-API and Flight-API repos. This service collects data from both the Weather and Flight APIs and compiles the data into one service that the front end can call. 
 
 To view the production site, please visit the [GTFO link](https://gtfo-fe.herokuapp.com/).
 
@@ -135,6 +136,14 @@ This is an example of an error response for Invalid Data (Missing/Incorrect)
 "status": 400
 }
 ```
+
+## Schema 
+
+ <p align="center">
+ <img src="https://i.imgur.com/OW5QQGw.png">
+  </p>
+  
+ 
 ## Dependencies
 
 

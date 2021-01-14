@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://flight-api-service.herokuapp.com/flights?date_from=30/01/2021&date_to=30/01/2021&fly_from=DEN&limit=20&nights_in_dst_from=5000&nights_in_dst_to=5000
+    uri: https://flight-api-service.herokuapp.com/api/v1/flights?date_from=30/01/2021&date_to=30/01/2021&fly_from=DEN&limit=20&nights_in_dst_from=5000&nights_in_dst_to=5000
     body:
       encoding: US-ASCII
       string: ''
@@ -33,11 +33,11 @@ http_interactions:
       Server:
       - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
       Date:
-      - Thu, 14 Jan 2021 22:49:18 GMT
+      - Thu, 14 Jan 2021 23:28:46 GMT
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Thu, 14 Jan 2021 22:49:18 GMT
+  recorded_at: Thu, 14 Jan 2021 23:28:46 GMT
 recorded_with: VCR 6.0.0

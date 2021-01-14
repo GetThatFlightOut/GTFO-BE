@@ -23,13 +23,9 @@ class Trip < ApplicationRecord
     flight_id: flight[:attributes][:id]
   }
 
-    weather_data = weather[:data]
-
     trip_object = create(data)
 
-    weather_data.each do |weather_day|
-      trip_object.weathers << Weather.create(weather_day[:attributes])
-    end
+    weather.each { |weather_day| trip_object.weathers << weather_day }
 
     trip_object
   end

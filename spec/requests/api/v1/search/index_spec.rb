@@ -11,7 +11,7 @@ RSpec.describe 'Search', :vcr do
     get '/api/v1/search', params: flight_params
     response_id = JSON.parse(response.body, symbolize_names: true)
 
-    get "/api/v1/requests/#{response_id[:data][0][:request_id]}"
+    get "/api/v1/requests/#{response_id[:data][:request_id]}"
     trips = JSON.parse(response.body, symbolize_names: true)
 
     expect(response.body).to be_a String
@@ -75,7 +75,7 @@ RSpec.describe 'Search', :vcr do
     get '/api/v1/search', params: flight_params
     response_id = JSON.parse(response.body, symbolize_names: true)
 
-    get "/api/v1/trips/#{response_id[:data][0][:trip_id]}"
+    get "/api/v1/trips/#{response_id[:data][:trip_id]}"
     trip = JSON.parse(response.body, symbolize_names: true)
 
     expect(response.body).to be_a String

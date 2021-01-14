@@ -16,19 +16,29 @@ class Api::V1::SearchController < ApplicationController
 
     trips.each { |trip| request.trips << trip }
 
+    if request.trips.empty?
+      payload = {
+        error: 'There were no available trips that matched your search.',
+        status: 400
+      }
+
+      render json: payload, status: :bad_request
+      return
+    end
+
     if request.limit.to_i == 1
       output = {
-        data: [
+        data: {
           trip_id: request.trips[0].id
-        ]
+        }
       }
 
       render json: output
     elsif request.limit.to_i >= 2
       output = {
-        data: [
+        data: {
           request_id: request.id
-        ]
+        }
       }
 
       render json: output

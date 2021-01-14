@@ -11,8 +11,10 @@ class TripFacade
             t = Thread.current
 
             lat = flight[:attributes][:latitude]
-            lon = flight[:attributes][:longitude]
-            weather = WeatherService.get_weather(lat, lon)
+            long = flight[:attributes][:longitude]
+
+            weather = WeatherService.get_weather(lat, long)
+
             t[:trip] = Trip.new_trip(flight, weather, index)
           end
         end

@@ -92,4 +92,33 @@ RSpec.describe 'Search', :vcr do
     expect(trip[:data][:attributes][:weather]).to be_an Array
     expect(trip[:data][:attributes][:weather]).to_not be_a Hash
   end
+
+  it 'returns error code when trip is not found' do
+    get "/api/v1/trips/3285729847"
+    trip = JSON.parse(response.body, symbolize_names: true)
+    expect(trip[:error]).to be_a String
+    expect(trip[:status]).to be(400)
+  end
+
+    it 'returns error code when request is not found' do
+    get "/api/v1/requests/3285729847"
+    request = JSON.parse(response.body, symbolize_names: true)
+    expect(request[:error]).to be_a String
+    expect(request[:status]).to be(400)
+  end
+
+    it 'returns error code when search is not found' do
+        flight_params = {
+            :departure_airport => 'DEN',
+            :departure_date => '30/01/2021',
+            :trip_duration => 5000,
+            :limit => 20
+            }
+    get '/api/v1/search', params: flight_params
+    response_id = JSON.parse(response.body, symbolize_names: true)
+    expect(response_id[:error]).to be_a String
+    expect(response_id[:status]).to be(400)
+  end
+
+
 end

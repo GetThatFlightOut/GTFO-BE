@@ -24,7 +24,7 @@ RSpec.describe Trip do
         }
       }
 
-    weather = {
+    weather_data = {
       data: [
         {
           type: 'weather',
@@ -58,18 +58,23 @@ RSpec.describe Trip do
         }
       ]
     }
+
+    weather = weather_data[:data].map do |weather_day|
+        Weather.create(weather_day[:attributes])
+      end
+
     trip = Trip.new_trip(flight, weather, 0)
 
     expect(trip).to be_a Trip
     expect(trip.origin_city).to eq(flight[:attributes][:origin_city])
     expect(trip.flight_id).to eq(flight[:attributes][:id])
     # expect(trip.weathers[0].min_f).to eq(weather[:data][0][:attributes][:min_f])
-    expect(trip.weathers[0].description).to eq(weather[:data][0][:attributes][:description])
-    expect(trip.weathers[0].date).to eq(weather[:data][0][:attributes][:date])
+    expect(trip.weathers[0].description).to eq(weather_data[:data][0][:attributes][:description])
+    expect(trip.weathers[0].date).to eq(weather_data[:data][0][:attributes][:date])
     expect(trip.weathers.count).to eq(2)
-    expect(trip.weathers[1].date).to eq(weather[:data][1][:attributes][:date])
-    expect(trip.weathers[0].date).to_not eq(weather[:data][1][:attributes][:date])
-    expect(trip.weathers[0].min_c).to_not eq(weather[:data][1][:attributes][:min_c])
-    expect(trip.weathers[0].sky_coverage).to_not eq(weather[:data][1][:attributes][:sky_coverage])
+    expect(trip.weathers[1].date).to eq(weather_data[:data][1][:attributes][:date])
+    expect(trip.weathers[0].date).to_not eq(weather_data[:data][1][:attributes][:date])
+    expect(trip.weathers[0].min_c).to_not eq(weather_data[:data][1][:attributes][:min_c])
+    expect(trip.weathers[0].sky_coverage).to_not eq(weather_data[:data][1][:attributes][:sky_coverage])
   end
 end

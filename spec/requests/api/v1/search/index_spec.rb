@@ -39,16 +39,14 @@ RSpec.describe 'Search', :vcr do
       trip_duration: 5,
       limit: 20
     }
-    # puts '----- #1'
+
     get '/api/v1/search', params: flight_params
     response_id = JSON.parse(response.body, symbolize_names: true)
 
     # test again for weather re-usal
 
-    # puts '----- #2'
     get '/api/v1/search', params: flight_params
     response_id = JSON.parse(response.body, symbolize_names: true)
-    # puts '----- #3'
 
     get "/api/v1/requests/#{response_id[:data][:request_id]}"
     trips = JSON.parse(response.body, symbolize_names: true)
@@ -133,31 +131,29 @@ RSpec.describe 'Search', :vcr do
   end
 
   it 'returns error code when trip is not found' do
-    get "/api/v1/trips/3285729847"
+    get '/api/v1/trips/3285729847'
     trip = JSON.parse(response.body, symbolize_names: true)
     expect(trip[:error]).to be_a String
     expect(trip[:status]).to be(400)
   end
 
-    it 'returns error code when request is not found' do
-    get "/api/v1/requests/3285729847"
+  it 'returns error code when request is not found' do
+    get '/api/v1/requests/3285729847'
     request = JSON.parse(response.body, symbolize_names: true)
     expect(request[:error]).to be_a String
     expect(request[:status]).to be(400)
   end
 
-    it 'returns error code when search is not found' do
-        flight_params = {
-            :departure_airport => 'DEN',
-            :departure_date => '30/01/2021',
-            :trip_duration => 5000,
-            :limit => 20
-            }
+  it 'returns error code when search is not found' do
+    flight_params = {
+      departure_airport: 'DEN',
+      departure_date: '30/01/2021',
+      trip_duration: 5000,
+      limit: 20
+    }
     get '/api/v1/search', params: flight_params
     response_id = JSON.parse(response.body, symbolize_names: true)
     expect(response_id[:error]).to be_a String
     expect(response_id[:status]).to be(400)
   end
-
-
 end

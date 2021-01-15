@@ -1,19 +1,21 @@
 class WeatherFacade
   def self.get_updated_weather(lat, long)
     latest_weather = *(0..7).map do |days|
-      seconds = days * 24 * 60 * 60
-      Weather.where(date: (Time.zone.now.beginning_of_day + seconds)..(Time.zone.now.end_of_day + seconds))
-             .where('created_at >= ?', Time.zone.now - (6 * 60 * 60))
+      seconds = days * 24 * 60 * 60 # + (86400)
+      Weather.where(date: (Time.current.beginning_of_day + seconds)..(Time.current.end_of_day + seconds))
+             .where('created_at >= ?', Time.current - (6 * 60 * 60))
              .where(lat: lat)
              .where(long: long)
              .limit(1)
     end
 
-    latest_weather.flatten!
+    check_full_weather(latest_weather.flatten!, lat, long)
+  end
 
-    if latest_weather.length >= 8
+  def self.check_full_weather(weather, lat, long)
+    if weather.length >= 8
 
-      latest_weather
+      weather
     else
       weather_data = WeatherService.get_weather(lat, long)[:data]
 

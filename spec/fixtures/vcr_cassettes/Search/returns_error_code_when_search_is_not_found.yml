@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://flight-api-service.herokuapp.com/api/v1/flights?date_from=30/01/2030&date_to=30/01/2030&fly_from=DEN&limit=20&nights_in_dst_from=5&nights_in_dst_to=5
+    uri: https://flight-api-service.herokuapp.com/api/v1/flights?date_from=30/01/2021&date_to=30/01/2021&fly_from=DEN&limit=20&nights_in_dst_from=5000&nights_in_dst_to=5000
     body:
       encoding: US-ASCII
       string: ''
@@ -15,15 +15,15 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 400
-      message: 'Bad Request '
+      code: 200
+      message: 'OK '
     headers:
       Connection:
       - keep-alive
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
-      - '171'
+      - '11'
       X-Xss-Protection:
       - 1; mode=block
       X-Content-Type-Options:
@@ -33,13 +33,11 @@ http_interactions:
       Server:
       - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
       Date:
-      - Thu, 14 Jan 2021 23:28:19 GMT
+      - Thu, 14 Jan 2021 23:28:46 GMT
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"message":[{"param":"date_from","errors":["Year of the given date
-        is far in the future."]},{"param":"date_to","errors":["Year of the given date
-        is far in the future."]}]}'
-  recorded_at: Thu, 14 Jan 2021 23:28:19 GMT
+      string: '{"data":[]}'
+  recorded_at: Thu, 14 Jan 2021 23:28:46 GMT
 recorded_with: VCR 6.0.0

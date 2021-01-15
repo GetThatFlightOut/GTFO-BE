@@ -5,11 +5,12 @@ class TripFacade
 
     if flights[:message].nil?
       threads = []
+
       flights[:data].each_with_index do |flight, index|
         threads << Thread.new do
           Rails.application.executor.wrap do
             t = Thread.current
-            # puts 'thread created'
+
             lat = flight[:attributes][:latitude]
             long = flight[:attributes][:longitude]
 
@@ -19,10 +20,11 @@ class TripFacade
           end
         end
       end
+
       threads.map(&:value).flatten
       threads.each do |t|
         @trips << t[:trip]
-        # t.join
+
         t.exit
       end
 

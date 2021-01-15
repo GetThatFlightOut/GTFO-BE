@@ -14,6 +14,8 @@ class TripFacade
             lat = flight[:attributes][:latitude]
             long = flight[:attributes][:longitude]
 
+            puts "#{lat}, #{long}, #{flight[:attributes][:city]}"
+
             weather = WeatherFacade.get_updated_weather(lat, long)
 
             t[:trip] = Trip.new_trip(flight, weather, index)

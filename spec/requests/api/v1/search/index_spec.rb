@@ -39,15 +39,17 @@ RSpec.describe 'Search', :vcr do
       trip_duration: 5,
       limit: 20
     }
-
+    puts '-------------- #1'
     get '/api/v1/search', params: flight_params
     response_id = JSON.parse(response.body, symbolize_names: true)
 
     # test again for weather re-usal
 
+    puts '-------------- #2'
     get '/api/v1/search', params: flight_params
     response_id = JSON.parse(response.body, symbolize_names: true)
 
+    puts '-------------- #3'
     get "/api/v1/requests/#{response_id[:data][:request_id]}"
     trips = JSON.parse(response.body, symbolize_names: true)
 

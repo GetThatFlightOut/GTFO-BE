@@ -20,7 +20,8 @@ class TripFacade
 
             t[:trip] = Trip.new_trip(flight, weather, index)
 
-            ActiveRecord::Base.remove_connection
+            connection = ActiveRecord::Base.connection
+            ActiveRecord::Base.remove_connection(connection)
           end
         end
       end

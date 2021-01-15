@@ -32,6 +32,18 @@ RSpec.describe 'Search', :vcr do
     expect(trips[:included][0][:attributes][:weather]).to_not be_a Hash
   end
 
+  describe 'weather reuse' do
+    before :each do
+      flight_params = {
+      departure_airport: 'DEN',
+      departure_date: '30/01/2021',
+      trip_duration: 5,
+      limit: 20
+    }
+
+      get '/api/v1/search', params: flight_params
+    response_id = JSON.parse(response.body, symbolize_names: true)
+    end
   it 'weather re-usage is performed correctly' do
     flight_params = {
       departure_airport: 'DEN',
@@ -70,6 +82,7 @@ RSpec.describe 'Search', :vcr do
     expect(trips[:included][0][:attributes][:weather]).to be_an Array
     expect(trips[:included][0][:attributes][:weather]).to_not be_a Hash
   end
+end
 
   it 'returns an error message when the flight_params are incomplete' do
     flight_params = {

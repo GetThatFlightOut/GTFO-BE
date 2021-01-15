@@ -7,6 +7,7 @@
 ![](https://img.shields.io/github/contributors/GetThatFlightOut/GTFO-FE)
 ![](https://img.shields.io/badge/GetThatFlightOut-BE-green)
 ![](https://github.com/GetThatFlightOut/GTFO-FE/stargazers)
+![](https://img.shields.io/github/issues/GetThatFlightOut/GTFO-BE)
 
 # GTFO-BE
 ![image](https://user-images.githubusercontent.com/68172332/104384272-6d70f100-54ee-11eb-94ba-287258e83de7.png)

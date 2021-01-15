@@ -26,7 +26,7 @@
 
 ## What it does
 
-This project part of a Service-Oriented Architecture (SOA) application that provides users with flight and weather information based on search parameters that the user provides. The GTFO-BE serves as an intermediary from the GTFO-FE repo and the Weather-API and Flight-API repos. This service collects data from both the Weather and Flight APIs and compiles the data into one service that the front end can call. 
+This project part of a Service-Oriented Architecture (SOA) application that provides users with flight and weather information based on search parameters that the user provides. The GTFO-BE serves as an intermediary from the GTFO-FE repo and the Weather-API and Flight-API repos. This service collects data from both the Weather and Flight APIs and compiles the data into one service that the front end can call.
 
 To view the production site, please visit the [GTFO link](https://gtfo-fe.herokuapp.com/).
 
@@ -75,13 +75,21 @@ This is an example of an error response for Invalid Data (Missing/Incorrect)
 }
 ```
 
-## Schema 
+### Asynchronous API Calls
+
+Due to the sheer amount of data returned from the two APIs, our team decided to implement asynchronous threads with the Rails Executor. This operation allows GTFO to handle multiple HTTP requests simultaneously by running multiple threads, up to 20, to reduce response time by 50%.
+
+ <p align="center">
+ <img src="https://i.imgur.com/JuoqyFa.png">
+ </p>
+
+## Schema
 
  <p align="center">
  <img src="https://i.imgur.com/OW5QQGw.png">
   </p>
-  
- 
+
+
 ## Dependencies
 
  * figaro
@@ -97,56 +105,56 @@ This is an example of an error response for Invalid Data (Missing/Incorrect)
 
 * For testing our team implemented Travis CI with RSpec
 
-> Travis CI is cloud based and when we submit a pull request, Travis will attempt to build our project and run the tests to ensure everything is working as expected. 
+> Travis CI is cloud based and when we submit a pull request, Travis will attempt to build our project and run the tests to ensure everything is working as expected.
 
-> RSpec is a tool for unit testing that will ensure we have the intended functionality at each level of our code. 
+> RSpec is a tool for unit testing that will ensure we have the intended functionality at each level of our code.
 
 * In order to run the tests, run `bundle exec rspec` in the command line and you should have all passing tests.
 
 ## Learning Goals
 
   * Consume two external APIs
-  
+
   * Build API's that return JSON responses
-  
+
   * Refactor code for better code for improved organization/readability
-  
+
   * Practice project management with project boards/daily standups/group retros
-  
+
   * Utilize workflow: small commits, descriptive pull requests and code review
-  
-  * Write thorough and understandable documentation 
-  
-  * Utilize a Service-Oriented Architecture with a front-end, a back-end, and at least one micro-service 
-  
+
+  * Write thorough and understandable documentation
+
+  * Utilize a Service-Oriented Architecture with a front-end, a back-end, and at least one micro-service
+
 ## Licenses
 
   * Ruby 2.5.3
   * Rails 2.5.4.3
   * Travis CI Enterprise
-  
+
 ## Contact
 
 #### Todd Estes: [![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/toddwestes/), [Email](mailto:elestes@gmail.com), [GitHub](https://github.com/Todd-Estes)
- 
+
 #### Connor Ferguson: [![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/connor-p-ferguson/), [Email](mailto:cpfergus1@gmail.com), [GitHub](https://github.com/cpfergus1)
- 
+
 #### George Soderholm: [![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/george-soderholm-05776947/), [Email](mailto:georgesoderholm@gmail.com), [GitHub](https://github.com/GeorgieGirl24)
-    
+
 #### Sage Freeman-Gonzales: [![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/sagefreemangonzales/), [Email](mailto:sagegonzales15@gmail.com), [GitHub](https://github.com/SageOfCode)
- 
+
 #### Sheryl Stillman: [![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/sherylstillman1/), [Email](mailto:sheryl.stillman@gmail.com), [GitHub](https://github.com/stillsheryl)
-    
+
 #### Aidan Murray:  [![LinkedIn][linkedin-shield]](http://www.linkedin.com/in/aidan-murray-teknoserval), [Email](mailto:aidanhansm@gmail.com), [GitHub](https://github.com/TeknoServal)
-      
+
 #### Jesse Mellinger: [![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/jesse-mellinger/), [Email](mailto:jesse.m.mellinger@gmail.com), [GitHub](https://github.com/JesseMellinger)
-        
+
 #### Nick King: [![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/nick-king-3128501ba/), [Email](mailto:nickmaxking@gmail.com), [GitHub](https://github.com/nmking22)
- 
+
 #### Brian Liu: [![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/brian-liu-8356287b/), [Email](mailto:brian.b.liu@gmail.com), [GitHub](https://github.com/badgerbreezy)
-    
+
 #### Will Dunlap: [![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/willwdunlap/), [Email](mailto:dunlapww@gmail.com), [GitHub](https://github.com/dunlapww)
-   
+
 ## Acknowledgments
 
 <!-- MARKDOWN LINKS -->

@@ -19,6 +19,8 @@ class TripFacade
             weather = WeatherFacade.get_updated_weather(lat, long)
 
             t[:trip] = Trip.new_trip(flight, weather, index)
+
+            ActiveRecord::Base.remove_connection
           end
         end
       end

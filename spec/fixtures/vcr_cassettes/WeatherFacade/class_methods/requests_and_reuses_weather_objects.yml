@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://gtfo-weather-api.herokuapp.com/api/v1/weather?lat=50&lon=60
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 15 Jan 2021 02:02:20 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '2511'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server:
+      - thin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"type":"weather","id":null,"attributes":{"min_f":15.78000000000003,"max_f":23.600000000000023,"min_c":-16.21999999999997,"max_c":-8.399999999999977,"day_feels_like_c":-19.619999999999976,"day_feels_like_f":12.380000000000024,"description":"overcast
+        clouds","date":"2021-01-15T08:00:00+00:00","sky_coverage":100}},{"type":"weather","id":null,"attributes":{"min_f":21.370000000000005,"max_f":32.660000000000025,"min_c":-10.629999999999995,"max_c":0.660000000000025,"day_feels_like_c":-13.579999999999984,"day_feels_like_f":18.420000000000016,"description":"light
+        snow","date":"2021-01-16T08:00:00+00:00","sky_coverage":96}},{"type":"weather","id":null,"attributes":{"min_f":20.910000000000025,"max_f":26.29000000000002,"min_c":-11.089999999999975,"max_c":-5.7099999999999795,"day_feels_like_c":-12.289999999999964,"day_feels_like_f":19.710000000000036,"description":"scattered
+        clouds","date":"2021-01-17T08:00:00+00:00","sky_coverage":48}},{"type":"weather","id":null,"attributes":{"min_f":18.83000000000004,"max_f":22.730000000000018,"min_c":-13.169999999999959,"max_c":-9.269999999999982,"day_feels_like_c":-15.259999999999991,"day_feels_like_f":16.74000000000001,"description":"overcast
+        clouds","date":"2021-01-18T08:00:00+00:00","sky_coverage":99}},{"type":"weather","id":null,"attributes":{"min_f":16.83000000000004,"max_f":20.230000000000018,"min_c":-15.169999999999959,"max_c":-11.769999999999982,"day_feels_like_c":-18.72999999999999,"day_feels_like_f":13.27000000000001,"description":"scattered
+        clouds","date":"2021-01-19T08:00:00+00:00","sky_coverage":26}},{"type":"weather","id":null,"attributes":{"min_f":18.129999999999995,"max_f":21.58000000000004,"min_c":-13.870000000000005,"max_c":-10.419999999999959,"day_feels_like_c":-16.370000000000005,"day_feels_like_f":15.629999999999995,"description":"light
+        snow","date":"2021-01-20T08:00:00+00:00","sky_coverage":100}},{"type":"weather","id":null,"attributes":{"min_f":7.320000000000022,"max_f":14.590000000000032,"min_c":-24.67999999999998,"max_c":-17.409999999999968,"day_feels_like_c":-25.659999999999968,"day_feels_like_f":6.340000000000032,"description":"overcast
+        clouds","date":"2021-01-21T08:00:00+00:00","sky_coverage":100}},{"type":"weather","id":null,"attributes":{"min_f":0.060000000000030695,"max_f":6.8300000000000125,"min_c":-31.93999999999997,"max_c":-25.169999999999987,"day_feels_like_c":-30.899999999999977,"day_feels_like_f":1.1000000000000227,"description":"clear
+        sky","date":"2021-01-22T08:00:00+00:00","sky_coverage":3}}]}'
+  recorded_at: Fri, 15 Jan 2021 02:02:20 GMT
+recorded_with: VCR 6.0.0

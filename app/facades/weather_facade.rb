@@ -14,11 +14,11 @@ class WeatherFacade
 
   def self.check_full_weather(weather, lat, long)
     if weather.length >= 8
-
+      puts "WEATHER REUSED"
       weather
     else
       weather_data = WeatherService.get_weather(lat, long)[:data]
-
+      puts "WEATHER ACQUIRED"
       weather_data.map do |weather_day|
         weather_day[:attributes][:lat] = lat
         weather_day[:attributes][:long] = long

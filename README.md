@@ -158,5 +158,7 @@ Due to the sheer amount of data returned from the two APIs, our team decided to 
 
 ## Acknowledgments
 
+Thank you to Ian Douglas and Dione Wilson for being such amazing instructors and guiding us through this project!
+
 <!-- MARKDOWN LINKS -->
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555

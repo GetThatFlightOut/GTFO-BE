@@ -31,7 +31,7 @@ This project part of a Service-Oriented Architecture (SOA) application that prov
 
 To view the production site, please visit the [GTFO link](https://gtfo-fe.herokuapp.com/).
 
-To view the other components of the application please visit the [Github Project Organization](https://github.com/GetThatFlightOut).
+To view the other components of the application please visit the [Github Project Organization](https://github.com/GetTheFlightOut).
 
 ## How to Install GTFO-BE
 
